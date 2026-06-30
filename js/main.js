@@ -32,11 +32,14 @@
   // ---- 부팅 ----
   async function boot() {
     initReveal();
-    if (window.APEX && APEX.store) {
-      await APEX.store.load();
-      APEX.initBoard();
-      if (APEX.initAdmin) APEX.initAdmin();
-    }
+    if (!window.APEX) return;
+    const jobs = [];
+    if (APEX.store) jobs.push(APEX.store.load());
+    if (APEX.site) jobs.push(APEX.site.load());
+    await Promise.all(jobs);
+    if (APEX.site && APEX.renderSite) APEX.renderSite();
+    if (APEX.store && APEX.initBoard) APEX.initBoard();
+    if (APEX.initAdmin) APEX.initAdmin();
   }
 
   if (document.readyState === "loading") {

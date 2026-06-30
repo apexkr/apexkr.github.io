@@ -44,11 +44,11 @@
   <section class="hero" id="hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="wrap hero-inner">
-      <p class="kicker reveal" data-reveal>EMBEDDED · EDGE · PLATFORM</p>
-      <h1 class="reveal" data-reveal data-reveal-delay="1">
+      <p class="kicker reveal" id="heroKicker" data-reveal>EMBEDDED · EDGE · PLATFORM</p>
+      <h1 class="reveal" id="heroTitle" data-reveal data-reveal-delay="1">
         하드웨어에서 <span class="grad">플랫폼</span>까지,<br>경계를 넓히는 임베디드 기술
       </h1>
-      <p class="hero-lead reveal" data-reveal data-reveal-delay="2">
+      <p class="hero-lead reveal" id="heroLead" data-reveal data-reveal-delay="2">
         주식회사 에이펙스는 검증된 임베디드 하드웨어 공급에서 출발해,
         지능형 제어 소프트웨어와 엣지 컴퓨팅을 거쳐 통합 모니터링 플랫폼으로 진화합니다.
       </p>
@@ -68,8 +68,8 @@
   <section id="about" class="section">
     <div class="wrap">
       <p class="eyebrow reveal" data-reveal>About</p>
-      <h2 class="title reveal" data-reveal data-reveal-delay="1">단순 공급을 넘어, 데이터의 가치를 잇는 회사</h2>
-      <p class="lead reveal" data-reveal data-reveal-delay="2">
+      <h2 class="title reveal" id="aboutTitle" data-reveal data-reveal-delay="1">단순 공급을 넘어, 데이터의 가치를 잇는 회사</h2>
+      <p class="lead reveal" id="aboutLead" data-reveal data-reveal-delay="2">
         에이펙스(APEX Co., Ltd.)는 임베디드 하드웨어 소싱을 기반으로 시작해, 자체 펌웨어·제어 기술과
         엣지 컴퓨팅 역량을 더해 <b>하드웨어부터 데이터까지 잇는 턴키(Turn-key) 솔루션</b>을 제공하는
         임베디드 기술 기업입니다. 글로벌 시장에서 검증된 핵심 부품의 안정적 공급망과
@@ -182,7 +182,7 @@
       <p class="eyebrow reveal" data-reveal>Corporate</p>
       <h2 class="title reveal" data-reveal data-reveal-delay="1">회사정보</h2>
       <div class="info reveal" data-reveal data-reveal-delay="2">
-        <dl>
+        <dl id="companyDl">
           <div><dt>상호</dt><dd>주식회사 에이펙스 <span class="muted">(APEX Co., Ltd.)</span></dd></div>
           <div><dt>대표이사</dt><dd>전혜민</dd></div>
           <div><dt>본점 소재지</dt><dd>대전광역시 유성구 대정로28번안길 80</dd></div>
@@ -266,46 +266,113 @@
   </div>
 </div>
 
-<!-- 관리자 패널 -->
+<!-- 관리자 대시보드 -->
 <div class="overlay" id="adminOverlay">
-  <div class="modal">
-    <div class="modal-head"><h3>전자공고 관리</h3><button class="x" data-close aria-label="닫기">×</button></div>
-    <div class="modal-body">
-      <p class="admin-banner">⚠️ 여기서의 추가·수정·삭제는 <b>이 브라우저에만 임시 저장(미리보기)</b>됩니다.
-        실제 게시는 <b>[게시용 JSON 생성]</b> → <code>data/notices.json</code> 교체 후 배포(commit·push)로 완료됩니다.</p>
-      <div class="admin-list" id="adminList"></div>
-      <button class="btn-sm primary" id="newBtn">+ 새 공고 작성</button>
-
-      <div id="editArea" hidden>
-        <input type="hidden" id="fId" />
-        <div class="field"><label for="fTitle">제목</label><input id="fTitle" /></div>
-        <div class="field row2">
-          <div><label for="fCat">분류</label>
-            <select id="fCat"><option>일반공고</option><option>결산공고</option><option>주주총회</option><option>기타</option></select></div>
-          <div><label for="fDate">최초 공고일자</label><input id="fDate" type="date" /></div>
-          <div><label for="fUpdated">변경일자</label><input id="fUpdated" type="date" /></div>
-        </div>
-        <div class="field"><label for="fBody">본문</label><textarea id="fBody"></textarea></div>
-        <div class="admin-actions">
-          <button class="btn-sm primary" id="saveBtn">저장</button>
-          <button class="btn-sm" id="cancelBtn">취소</button>
-        </div>
+  <div class="dash">
+    <div class="dash-head">
+      <div class="dash-title">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28" width="22" height="22"><path d="M14 3 L25 24 L17 24 L14 17 L11 24 L3 24 Z" fill="url(#bg2)"/><defs><linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b56e0"/><stop offset="1" stop-color="#06b6a4"/></linearGradient></defs></svg></span>
+        APEX 관리자 대시보드
       </div>
+      <div class="dash-head-actions">
+        <button class="btn-sm" id="logoutBtn">로그아웃</button>
+        <button class="x" data-close aria-label="닫기">×</button>
+      </div>
+    </div>
+    <div class="dash-body">
+      <nav class="dash-side" aria-label="관리 메뉴">
+        <button class="dash-nav active" data-tab="overview">📊 개요</button>
+        <button class="dash-nav" data-tab="notices">📢 전자공고</button>
+        <button class="dash-nav" data-tab="site">🏢 회사정보·소개</button>
+        <button class="dash-nav" data-tab="publish">🚀 게시(배포)</button>
+      </nav>
+      <div class="dash-main">
+        <p class="admin-banner">⚠️ 편집 내용은 <b>이 브라우저에만 임시 저장(미리보기)</b>됩니다. 실제 게시는
+          <b>[게시(배포)]</b> 탭에서 JSON을 생성해 <code>data/*.json</code> 교체 후 배포(commit·push)해야 반영됩니다.</p>
 
-      <div class="admin-foot">
-        <div class="admin-actions">
-          <button class="btn-sm primary" id="exportBtn">게시용 JSON 생성</button>
-          <button class="btn-sm" id="copyBtn" hidden>📋 복사</button>
-          <button class="btn-sm danger" id="resetBtn">임시본 초기화</button>
-          <button class="btn-sm" id="logoutBtn">로그아웃</button>
-        </div>
-        <textarea id="exportBox" placeholder="‘게시용 JSON 생성’을 누르면 data/notices.json에 넣을 내용이 여기 출력됩니다." readonly hidden></textarea>
+        <!-- 개요 -->
+        <section class="dash-panel" data-panel="overview">
+          <h3 class="dash-h">개요</h3>
+          <div class="stat-grid">
+            <div class="stat"><b id="statCount">0</b><span>등록 공고</span></div>
+            <div class="stat"><b id="statLatest">—</b><span>최근 공고일</span></div>
+            <div class="stat"><b id="statDraft">없음</b><span>미게시 임시변경</span></div>
+          </div>
+          <p class="dash-note">왼쪽 메뉴에서 <b>전자공고</b>와 <b>회사정보·소개</b>를 관리하세요.
+            편집을 마치면 <b>게시(배포)</b> 탭에서 파일을 내보내 배포합니다.</p>
+        </section>
+
+        <!-- 전자공고 -->
+        <section class="dash-panel" data-panel="notices" hidden>
+          <h3 class="dash-h">전자공고 관리</h3>
+          <div class="admin-list" id="adminList"></div>
+          <button class="btn-sm primary" id="newBtn">+ 새 공고 작성</button>
+          <div id="editArea" hidden>
+            <input type="hidden" id="fId" />
+            <div class="field"><label for="fTitle">제목</label><input id="fTitle" /></div>
+            <div class="field row2">
+              <div><label for="fCat">분류</label>
+                <select id="fCat"><option>일반공고</option><option>결산공고</option><option>주주총회</option><option>기타</option></select></div>
+              <div><label for="fDate">최초 공고일자</label><input id="fDate" type="date" /></div>
+              <div><label for="fUpdated">변경일자</label><input id="fUpdated" type="date" /></div>
+            </div>
+            <div class="field"><label for="fBody">본문</label><textarea id="fBody"></textarea></div>
+            <div class="admin-actions">
+              <button class="btn-sm primary" id="saveBtn">저장</button>
+              <button class="btn-sm" id="cancelBtn">취소</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 회사정보·소개 -->
+        <section class="dash-panel" data-panel="site" hidden>
+          <h3 class="dash-h">회사정보 · 소개</h3>
+          <h4 class="dash-sub">회사정보</h4>
+          <div class="field row2">
+            <div><label for="sName">상호(국문)</label><input id="sName" /></div>
+            <div><label for="sNameEn">상호(영문)</label><input id="sNameEn" /></div>
+          </div>
+          <div class="field row2">
+            <div><label for="sCeo">대표이사</label><input id="sCeo" /></div>
+            <div><label for="sEst">설립일</label><input id="sEst" /></div>
+          </div>
+          <div class="field"><label for="sAddr">본점 소재지</label><input id="sAddr" /></div>
+          <div class="field"><label for="sField">사업 분야</label><input id="sField" /></div>
+          <div class="field"><label for="sNotice">공고방법</label><input id="sNotice" /></div>
+          <h4 class="dash-sub">히어로 / 회사소개 문구</h4>
+          <div class="field"><label for="sHeroKicker">상단 키워드</label><input id="sHeroKicker" /></div>
+          <div class="field"><label for="sHeroTitle">히어로 제목 (HTML 가능: &lt;br&gt;, &lt;span class="grad"&gt;)</label><textarea id="sHeroTitle" style="min-height:70px"></textarea></div>
+          <div class="field"><label for="sHeroLead">히어로 설명</label><textarea id="sHeroLead" style="min-height:70px"></textarea></div>
+          <div class="field"><label for="sAboutTitle">회사소개 제목</label><input id="sAboutTitle" /></div>
+          <div class="field"><label for="sAboutLead">회사소개 본문 (HTML 가능: &lt;b&gt;)</label><textarea id="sAboutLead"></textarea></div>
+          <div class="admin-actions">
+            <button class="btn-sm primary" id="siteSaveBtn">회사정보·소개 저장(미리보기)</button>
+          </div>
+        </section>
+
+        <!-- 게시 -->
+        <section class="dash-panel" data-panel="publish" hidden>
+          <h3 class="dash-h">게시 (배포)</h3>
+          <p class="dash-note">① 아래 버튼으로 파일 내용을 생성 → ② 출력 내용을 복사해 해당 파일을 교체 →
+            ③ <code>git add -A &amp;&amp; git commit -m "..." &amp;&amp; git push</code> 하면 실제 게시됩니다. (Claude에게 맡겨도 됩니다.)</p>
+          <div class="admin-actions">
+            <button class="btn-sm primary" id="exportNoticesBtn">data/notices.json 생성</button>
+            <button class="btn-sm primary" id="exportSiteBtn">data/site.json 생성</button>
+            <button class="btn-sm" id="copyBtn" hidden>📋 복사</button>
+          </div>
+          <p id="exportLabel" class="dash-note" hidden></p>
+          <textarea id="exportBox" readonly hidden></textarea>
+          <div class="admin-actions" style="margin-top:16px">
+            <button class="btn-sm danger" id="resetBtn">모든 임시본 초기화</button>
+          </div>
+        </section>
       </div>
     </div>
   </div>
 </div>
 
 <script src="js/notices.js"></script>
+<script src="js/site.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/main.js"></script>
 </body>
