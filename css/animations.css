@@ -27,12 +27,17 @@
 @keyframes floatGrid{from{transform:translateY(0)}to{transform:translateY(-12px)}}
 .hero-bg::after{animation:floatGrid 9s ease-in-out infinite alternate}
 
-/* 브랜드 마크 부드러운 펄스 */
-@keyframes apexPulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
-.brand-mark svg{animation:apexPulse 4s ease-in-out infinite}
+/* 브랜드 마크: 회로 데이터 흐름 + 노드 펄스 (임베디드/연결 느낌) */
+.brand-mark .trace{stroke-dasharray:5 4;animation:traceFlow 2.2s linear infinite}
+@keyframes traceFlow{to{stroke-dashoffset:-18}}
+.brand-mark .node{animation:nodePulse 2.2s ease-in-out infinite;transform-origin:center}
+.brand-mark .node:nth-of-type(2){animation-delay:.35s}
+.brand-mark .node:nth-of-type(3){animation-delay:.7s}
+@keyframes nodePulse{0%,100%{opacity:.55}50%{opacity:1}}
+.brand:hover .brand-mark .trace{animation-duration:1s}
 
 /* 카드/기둥 등장 후 hover 외 정지 */
 @media (prefers-reduced-motion:reduce){
   .reveal,.phase{opacity:1 !important;transform:none !important;transition:none !important}
-  .hero-bg::after,.brand-mark svg{animation:none !important}
+  .hero-bg::after,.brand-mark .trace,.brand-mark .node{animation:none !important}
 }

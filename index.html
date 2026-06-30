@@ -22,7 +22,20 @@
   <div class="wrap nav">
     <a class="brand" href="#hero" aria-label="APEX 홈">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 28 28" width="28" height="28"><path d="M14 3 L25 24 L17 24 L14 17 L11 24 L3 24 Z" fill="url(#bg)"/><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b56e0"/><stop offset="1" stop-color="#06b6a4"/></linearGradient></defs></svg>
+        <svg class="logo-svg" viewBox="0 0 48 48" width="30" height="30">
+          <defs><linearGradient id="apexGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b56e0"/><stop offset="1" stop-color="#06b6a4"/></linearGradient></defs>
+          <g class="traces" fill="none" stroke="url(#apexGrad)" stroke-width="2.6" stroke-linecap="round">
+            <path class="trace" d="M24 12 V18"/><path class="trace" d="M12 37 L18.5 30.5"/><path class="trace" d="M36 37 L29.5 30.5"/>
+          </g>
+          <g stroke="url(#apexGrad)" stroke-width="2.2" stroke-linecap="round">
+            <path d="M17 22 H13.5"/><path d="M17 26 H13.5"/><path d="M31 22 H34.5"/><path d="M31 26 H34.5"/>
+          </g>
+          <rect x="17" y="17" width="14" height="14" rx="4.2" fill="url(#apexGrad)"/>
+          <rect x="20.5" y="20.5" width="7" height="7" rx="1.6" fill="#fff" opacity=".92"/>
+          <circle class="node" cx="24" cy="9" r="3.8" fill="url(#apexGrad)"/>
+          <circle class="node" cx="10.5" cy="39" r="3.8" fill="url(#apexGrad)"/>
+          <circle class="node" cx="37.5" cy="39" r="3.8" fill="url(#apexGrad)"/>
+        </svg>
       </span>
       <span class="brand-text">APEX<small>주식회사 에이펙스</small></span>
     </a>
@@ -248,6 +261,7 @@
     <div class="fright">
       공고 홈페이지 https://apexkr.github.io<br>
       © 2026 APEX Co., Ltd. All rights reserved.<br>
+      <a href="brand.html" style="color:var(--brand)">브랜드 · 로고</a> ·
       <button class="admin-link" id="adminLink">🔒 관리자</button>
     </div>
   </div>
