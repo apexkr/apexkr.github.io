@@ -24,8 +24,8 @@
 .hero-bg::after{animation:floatGrid 10s ease-in-out infinite alternate}
 
 
-.logo-svg .apex-mark{transform-origin:24px 42px;transition:transform .22s var(--ease),filter .22s var(--ease)}
-.brand:hover .logo-svg .apex-mark{transform:translateY(-1px);filter:drop-shadow(0 4px 8px rgba(27,86,224,.18))}
+.brand .logo-svg{transition:transform .22s var(--ease),filter .22s var(--ease)}
+.brand:hover .logo-svg{transform:translateY(-1px);filter:drop-shadow(0 4px 8px rgba(27,86,224,.18))}
 .network-main{animation:networkFlow 5s linear infinite}
 @keyframes networkFlow{to{stroke-dashoffset:-88}}
 .spark{opacity:.35;transform-box:fill-box;transform-origin:center;animation:sparkPulse 2.8s ease-in-out infinite}

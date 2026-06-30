@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>브랜드 · 로고 | 주식회사 에이펙스</title>
-<meta name="description" content="주식회사 에이펙스(APEX) 로고·브랜드 자산 다운로드 — 심플 APEX 심볼, 가로형, 세로형, 단색, 화이트 버전 (SVG·PNG)." />
+<meta name="description" content="주식회사 에이펙스(APEX) 로고·브랜드 자산 다운로드 — 디바이스 링크 심볼, 가로형, 세로형, 단색, 화이트 버전 (SVG·PNG)." />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,13 +45,17 @@
       <span class="brand-mark" aria-hidden="true">
         <svg class="logo-svg" viewBox="0 0 48 48" width="32" height="32">
           <defs>
-            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="8" y1="6" x2="40" y2="42">
+            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="7" y1="7" x2="41" y2="41">
               <stop offset="0" stop-color="#1b56e0"/>
               <stop offset=".62" stop-color="#06b6a4"/>
               <stop offset="1" stop-color="#4dd9ff"/>
             </linearGradient>
           </defs>
-          <path class="apex-mark" fill-rule="evenodd" clip-rule="evenodd" d="M24 5.8 42 42h-8.2l-3.1-6.9H17.3L14.2 42H6L24 5.8Zm0 14.2 4.2 10.4h-8.4L24 20Z" fill="url(#brandHeadGrad)"/>
+          <path class="apex-mark" d="M24 4.8 41.5 15.2v17.6L24 43.2 6.5 32.8V15.2Z" fill="url(#brandHeadGrad)"/>
+          <path class="apex-link" d="M15.7 27.6 24 17.2l8.3 10.4" fill="none" stroke="#fff" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round" opacity=".94"/>
+          <rect x="12.3" y="24.2" width="6.8" height="6.8" rx="1.7" fill="#fff"/>
+          <rect x="20.6" y="13.8" width="6.8" height="6.8" rx="1.7" fill="#fff"/>
+          <rect x="28.9" y="24.2" width="6.8" height="6.8" rx="1.7" fill="#fff"/>
         </svg>
       </span>
       <span class="brand-text"><span class="brand-word">APEX</span><small>주식회사 에이펙스</small></span>
@@ -65,7 +69,7 @@
     <a class="back-link" href="index.html">← 홈으로 돌아가기</a>
     <p class="eyebrow">Brand Assets</p>
     <h1 class="title">브랜드 · 로고</h1>
-    <p class="lead">한눈에 읽히는 APEX 워드마크와 단순한 상승형 A 심볼입니다.
+    <p class="lead">세 개의 임베디드 노드가 위로 연결되는 APEX 고유의 디바이스 링크 심볼입니다.
       벡터(SVG)는 인쇄·확대에, PNG는 문서·웹에 적합합니다.</p>
   </div>
 </section>
@@ -100,7 +104,11 @@
   }
   function mark(paint, core, tx, ty, sc) {
     return '<g transform="translate(' + tx + ',' + ty + ') scale(' + sc + ')">' +
-      '<path fill-rule="evenodd" clip-rule="evenodd" d="M24 5.8 42 42h-8.2l-3.1-6.9H17.3L14.2 42H6L24 5.8Zm0 14.2 4.2 10.4h-8.4L24 20Z" fill="' + paint + '"/></g>';
+      '<path d="M24 4.8 41.5 15.2v17.6L24 43.2 6.5 32.8V15.2Z" fill="' + paint + '"/>' +
+      '<path d="M15.7 27.6 24 17.2l8.3 10.4" fill="none" stroke="' + core + '" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round" opacity=".94"/>' +
+      '<rect x="12.3" y="24.2" width="6.8" height="6.8" rx="1.7" fill="' + core + '"/>' +
+      '<rect x="20.6" y="13.8" width="6.8" height="6.8" rx="1.7" fill="' + core + '"/>' +
+      '<rect x="28.9" y="24.2" width="6.8" height="6.8" rx="1.7" fill="' + core + '"/></g>';
   }
   var FONT = "Manrope, Aptos Display, Segoe UI Variable Display, Pretendard, Arial, sans-serif";
   function wordH(tc, sc) {
@@ -114,11 +122,11 @@
   // 변형 정의
   var INK = "#0e1726", MUTED = "#67768d";
   var VARIANTS = [
-    { key: "symbol", name: "심볼 마크", desc: "심플한 상승형 A 심볼. 파비콘·프로필용.", dark: false,
+    { key: "symbol", name: "심볼 마크", desc: "디바이스 링크 피크 심볼. 파비콘·프로필용.", dark: false,
       svg: svg("48 48", 48, 48, grad("gs") + mark("url(#gs)", "#fff", 0, 0, 1)) },
     { key: "horizontal", name: "가로형 (기본)", desc: "공식 기본형. 헤더·문서 상단용.", dark: false,
       svg: svg("210 56", 210, 56, grad("gh") + mark("url(#gh)", "#fff", 4, 4, 1) + wordH(INK, MUTED)) },
-    { key: "vertical", name: "세로형", desc: "심볼과 APEX 텍스트를 세로로 정리한 버전.", dark: false,
+    { key: "vertical", name: "세로형", desc: "디바이스 링크 심볼과 APEX 텍스트를 세로로 정리한 버전.", dark: false,
       svg: svg("150 124", 150, 124, grad("gv") + mark("url(#gv)", "#fff", 51, 6, 1) +
         '<text x="75" y="86" text-anchor="middle" font-family="' + FONT + '" font-weight="800" font-size="29" letter-spacing="0" fill="' + INK + '">APEX</text>' +
         '<text x="75" y="106" text-anchor="middle" font-family="' + FONT + '" font-weight="600" font-size="11" fill="' + MUTED + '">주식회사 에이펙스</text>') },
