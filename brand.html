@@ -4,8 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>브랜드 · 로고 | 주식회사 에이펙스</title>
-<meta name="description" content="주식회사 에이펙스(APEX) 로고·브랜드 자산 다운로드 — 상승형 APEX 심볼, 가로형, 세로형, 단색, 화이트 버전 (SVG·PNG)." />
+<meta name="description" content="주식회사 에이펙스(APEX) 로고·브랜드 자산 다운로드 — 심플 APEX 심볼, 가로형, 세로형, 단색, 화이트 버전 (SVG·PNG)." />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/layout.css" />
@@ -40,34 +43,20 @@
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="APEX 홈">
       <span class="brand-mark" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 48 48" width="34" height="34">
+        <svg class="logo-svg" viewBox="0 0 48 48" width="32" height="32">
           <defs>
-            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="7" y1="6" x2="42" y2="41">
+            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="8" y1="6" x2="40" y2="42">
               <stop offset="0" stop-color="#1b56e0"/>
-              <stop offset=".58" stop-color="#06b6a4"/>
+              <stop offset=".62" stop-color="#06b6a4"/>
               <stop offset="1" stop-color="#4dd9ff"/>
             </linearGradient>
           </defs>
-          <g class="traces" fill="none" stroke="url(#brandHeadGrad)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
-            <path class="trace" d="M6.5 15.5h8.8l4.3 4.5"/>
-            <path class="trace" d="M41.5 15.5h-8.8l-4.3 4.5"/>
-            <path class="trace" d="M6.5 32.5h9.6l4.6-4.8"/>
-            <path class="trace" d="M41.5 32.5h-9.6l-4.6-4.8"/>
-            <path class="trace" d="M24 6.8v7.4"/>
-          </g>
-          <g class="pads" fill="url(#brandHeadGrad)">
-            <rect class="pad" x="3.6" y="12.8" width="5.4" height="5.4" rx="1.4"/>
-            <rect class="pad" x="39" y="12.8" width="5.4" height="5.4" rx="1.4"/>
-            <rect class="pad" x="3.6" y="29.8" width="5.4" height="5.4" rx="1.4"/>
-            <rect class="pad" x="39" y="29.8" width="5.4" height="5.4" rx="1.4"/>
-            <rect class="pad" x="21.3" y="3.7" width="5.4" height="5.4" rx="1.4"/>
-          </g>
-          <path class="apex-rise" d="M24 6.4 42.2 40.2h-8.3l-3.7-7.5H17.8l-3.7 7.5H5.8Z" fill="url(#brandHeadGrad)"/>
-          <path d="M20.4 27.1 24 18.4l3.6 8.7Z" fill="#fff" opacity=".94"/>
-          <path d="M18.8 31.2h10.4l-1.65-3.35h-7.1Z" fill="#fff" opacity=".68"/>
+          <path class="apex-mark" d="M24 5.8 42 42h-8.4l-3.2-6.9H17.6L14.4 42H6Z" fill="url(#brandHeadGrad)"/>
+          <path d="M20.6 28.5 24 20.8l3.4 7.7Z" fill="#fff" opacity=".96"/>
+          <path d="M18.8 32.8h10.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".78"/>
         </svg>
       </span>
-      <span class="brand-text">APEX<small>주식회사 에이펙스</small></span>
+      <span class="brand-text"><span class="brand-word">APEX</span><small>주식회사 에이펙스</small></span>
     </a>
     <nav aria-label="주요 메뉴"><ul><li><a href="index.html">홈으로</a></li></ul></nav>
   </div>
@@ -78,7 +67,7 @@
     <a class="back-link" href="index.html">← 홈으로 돌아가기</a>
     <p class="eyebrow">Brand Assets</p>
     <h1 class="title">브랜드 · 로고</h1>
-    <p class="lead">주식회사 에이펙스(APEX)의 로고를 용도에 맞게 내려받으세요.
+    <p class="lead">한눈에 읽히는 APEX 워드마크와 단순한 상승형 A 심볼입니다.
       벡터(SVG)는 인쇄·확대에, PNG는 문서·웹에 적합합니다.</p>
   </div>
 </section>
@@ -108,25 +97,19 @@
 (function () {
   // ---- 로고 SVG 빌더 (48x48 기준 마크) ----
   function grad(id) {
-    return '<defs><linearGradient id="' + id + '" gradientUnits="userSpaceOnUse" x1="7" y1="6" x2="42" y2="41">' +
-      '<stop offset="0" stop-color="#1b56e0"/><stop offset=".58" stop-color="#06b6a4"/><stop offset="1" stop-color="#4dd9ff"/></linearGradient></defs>';
+    return '<defs><linearGradient id="' + id + '" gradientUnits="userSpaceOnUse" x1="8" y1="6" x2="40" y2="42">' +
+      '<stop offset="0" stop-color="#1b56e0"/><stop offset=".62" stop-color="#06b6a4"/><stop offset="1" stop-color="#4dd9ff"/></linearGradient></defs>';
   }
   function mark(paint, core, tx, ty, sc) {
     return '<g transform="translate(' + tx + ',' + ty + ') scale(' + sc + ')">' +
-      '<g fill="none" stroke="' + paint + '" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">' +
-      '<path d="M6.5 15.5h8.8l4.3 4.5"/><path d="M41.5 15.5h-8.8l-4.3 4.5"/>' +
-      '<path d="M6.5 32.5h9.6l4.6-4.8"/><path d="M41.5 32.5h-9.6l-4.6-4.8"/><path d="M24 6.8v7.4"/></g>' +
-      '<g fill="' + paint + '"><rect x="3.6" y="12.8" width="5.4" height="5.4" rx="1.4"/>' +
-      '<rect x="39" y="12.8" width="5.4" height="5.4" rx="1.4"/><rect x="3.6" y="29.8" width="5.4" height="5.4" rx="1.4"/>' +
-      '<rect x="39" y="29.8" width="5.4" height="5.4" rx="1.4"/><rect x="21.3" y="3.7" width="5.4" height="5.4" rx="1.4"/></g>' +
-      '<path d="M24 6.4 42.2 40.2h-8.3l-3.7-7.5H17.8l-3.7 7.5H5.8Z" fill="' + paint + '"/>' +
-      '<path d="M20.4 27.1 24 18.4l3.6 8.7Z" fill="' + core + '" opacity=".94"/>' +
-      '<path d="M18.8 31.2h10.4l-1.65-3.35h-7.1Z" fill="' + core + '" opacity=".68"/></g>';
+      '<path d="M24 5.8 42 42h-8.4l-3.2-6.9H17.6L14.4 42H6Z" fill="' + paint + '"/>' +
+      '<path d="M20.6 28.5 24 20.8l3.4 7.7Z" fill="' + core + '" opacity=".96"/>' +
+      '<path d="M18.8 32.8h10.4" fill="none" stroke="' + core + '" stroke-width="2.2" stroke-linecap="round" opacity=".78"/></g>';
   }
-  var FONT = "Pretendard, 'Malgun Gothic', Arial, sans-serif";
+  var FONT = "Manrope, Aptos Display, Segoe UI Variable Display, Pretendard, Arial, sans-serif";
   function wordH(tc, sc) {
-    return '<text x="62" y="32" font-family="' + FONT + '" font-weight="800" font-size="27" letter-spacing="1" fill="' + tc + '">APEX</text>' +
-      '<text x="63" y="47" font-family="' + FONT + '" font-weight="600" font-size="10.5" fill="' + sc + '">주식회사 에이펙스</text>';
+    return '<text x="60" y="32" font-family="' + FONT + '" font-weight="800" font-size="28" letter-spacing="0" fill="' + tc + '">APEX</text>' +
+      '<text x="61" y="47" font-family="Pretendard, Malgun Gothic, Arial, sans-serif" font-weight="650" font-size="10.5" letter-spacing="0" fill="' + sc + '">주식회사 에이펙스</text>';
   }
   function svg(vb, w, h, inner) {
     return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + vb + '" width="' + w + '" height="' + h + '">' + inner + '</svg>';
@@ -135,13 +118,13 @@
   // 변형 정의
   var INK = "#0e1726", MUTED = "#67768d";
   var VARIANTS = [
-    { key: "symbol", name: "심볼 마크", desc: "APEX 상승형 칩/링크 심볼. 파비콘·프로필용.", dark: false,
+    { key: "symbol", name: "심볼 마크", desc: "심플한 상승형 A 심볼. 파비콘·프로필용.", dark: false,
       svg: svg("48 48", 48, 48, grad("gs") + mark("url(#gs)", "#fff", 0, 0, 1)) },
     { key: "horizontal", name: "가로형 (기본)", desc: "공식 기본형. 헤더·문서 상단용.", dark: false,
       svg: svg("210 56", 210, 56, grad("gh") + mark("url(#gh)", "#fff", 4, 4, 1) + wordH(INK, MUTED)) },
-    { key: "vertical", name: "세로형", desc: "심볼을 강조하는 배너·프로필 공간용.", dark: false,
+    { key: "vertical", name: "세로형", desc: "심볼과 APEX 텍스트를 세로로 정리한 버전.", dark: false,
       svg: svg("150 124", 150, 124, grad("gv") + mark("url(#gv)", "#fff", 51, 6, 1) +
-        '<text x="75" y="86" text-anchor="middle" font-family="' + FONT + '" font-weight="800" font-size="28" letter-spacing="1" fill="' + INK + '">APEX</text>' +
+        '<text x="75" y="86" text-anchor="middle" font-family="' + FONT + '" font-weight="800" font-size="29" letter-spacing="0" fill="' + INK + '">APEX</text>' +
         '<text x="75" y="106" text-anchor="middle" font-family="' + FONT + '" font-weight="600" font-size="11" fill="' + MUTED + '">주식회사 에이펙스</text>') },
     { key: "mono-black", name: "단색 (블랙)", desc: "팩스·도장·단색 인쇄·계약서용.", dark: false,
       svg: svg("210 56", 210, 56, mark(INK, "#fff", 4, 4, 1) + wordH(INK, INK)) },

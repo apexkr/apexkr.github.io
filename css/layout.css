@@ -10,10 +10,11 @@ header{
   border-bottom:1px solid var(--line);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
-.brand{display:flex;align-items:center;gap:11px;font-weight:800}
-.brand-mark{display:grid;place-items:center}
-.brand-text{display:flex;flex-direction:column;font-size:19px;letter-spacing:0;line-height:1}
-.brand-text small{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:0;margin-top:3px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand-mark{display:grid;place-items:center;flex:0 0 auto}
+.brand-text{display:flex;flex-direction:column;line-height:.95}
+.brand-word{font-family:"Manrope","Aptos Display","Segoe UI Variable Display","Pretendard",sans-serif;font-size:21px;font-weight:850;letter-spacing:0;color:var(--ink)}
+.brand-text small{font-size:10.5px;font-weight:650;color:var(--muted);letter-spacing:0;margin-top:4px}
 nav ul{display:flex;gap:26px;font-size:15px;font-weight:600}
 nav a{color:var(--ink-soft);transition:color .18s var(--ease)}
 nav a:hover{color:var(--brand)}
@@ -98,6 +99,7 @@ footer strong{color:var(--ink)}
   .hero-visual{position:absolute;right:-92px;bottom:6px;width:350px;min-height:0;opacity:.34;z-index:0;pointer-events:none}
   .network-svg{width:100%}
   .hero-stats{display:flex;gap:10px;max-width:none;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
-  .hero-stats li{min-width:184px;min-height:82px;padding:14px 15px}  .frow{flex-direction:column}
+  .hero-stats li{min-width:184px;min-height:82px;padding:14px 15px}
+  .frow{flex-direction:column}
   .fright{text-align:left}
 }
