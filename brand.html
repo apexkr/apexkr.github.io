@@ -51,9 +51,7 @@
               <stop offset="1" stop-color="#4dd9ff"/>
             </linearGradient>
           </defs>
-          <path class="apex-mark" d="M24 5.8 42 42h-8.4l-3.2-6.9H17.6L14.4 42H6Z" fill="url(#brandHeadGrad)"/>
-          <path d="M20.6 28.5 24 20.8l3.4 7.7Z" fill="#fff" opacity=".96"/>
-          <path d="M18.8 32.8h10.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".78"/>
+          <path class="apex-mark" fill-rule="evenodd" clip-rule="evenodd" d="M24 5.8 42 42h-8.2l-3.1-6.9H17.3L14.2 42H6L24 5.8Zm0 14.2 4.2 10.4h-8.4L24 20Z" fill="url(#brandHeadGrad)"/>
         </svg>
       </span>
       <span class="brand-text"><span class="brand-word">APEX</span><small>주식회사 에이펙스</small></span>
@@ -102,9 +100,7 @@
   }
   function mark(paint, core, tx, ty, sc) {
     return '<g transform="translate(' + tx + ',' + ty + ') scale(' + sc + ')">' +
-      '<path d="M24 5.8 42 42h-8.4l-3.2-6.9H17.6L14.4 42H6Z" fill="' + paint + '"/>' +
-      '<path d="M20.6 28.5 24 20.8l3.4 7.7Z" fill="' + core + '" opacity=".96"/>' +
-      '<path d="M18.8 32.8h10.4" fill="none" stroke="' + core + '" stroke-width="2.2" stroke-linecap="round" opacity=".78"/></g>';
+      '<path fill-rule="evenodd" clip-rule="evenodd" d="M24 5.8 42 42h-8.2l-3.1-6.9H17.3L14.2 42H6L24 5.8Zm0 14.2 4.2 10.4h-8.4L24 20Z" fill="' + paint + '"/></g>';
   }
   var FONT = "Manrope, Aptos Display, Segoe UI Variable Display, Pretendard, Arial, sans-serif";
   function wordH(tc, sc) {
