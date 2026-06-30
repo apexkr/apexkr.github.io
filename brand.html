@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>브랜드 · 로고 | 주식회사 에이펙스</title>
-<meta name="description" content="주식회사 에이펙스(APEX) 로고·브랜드 자산 다운로드 — 심볼, 가로형, 세로형, 단색, 화이트 버전 (SVG·PNG)." />
+<meta name="description" content="주식회사 에이펙스(APEX) 로고·브랜드 자산 다운로드 — 상승형 APEX 심볼, 가로형, 세로형, 단색, 화이트 버전 (SVG·PNG)." />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link rel="stylesheet" href="css/base.css" />
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/components.css" />
 <style>
   .brand-hero{padding:72px 0 44px;border-bottom:1px solid var(--line);
-    background:radial-gradient(700px 360px at 80% -20%,rgba(6,182,164,.14),transparent 60%),var(--bg-alt)}
+    background:linear-gradient(118deg,#f7fbff 0%,#ffffff 54%,#effbf8 100%)}
   .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;margin-bottom:20px}
   .back-link:hover{color:var(--brand)}
   .logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;padding:48px 0}
@@ -40,17 +40,31 @@
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="APEX 홈">
       <span class="brand-mark" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 48 48" width="30" height="30">
-          <defs><linearGradient id="hg" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="40" y2="40"><stop offset="0" stop-color="#1b56e0"/><stop offset="1" stop-color="#06b6a4"/></linearGradient></defs>
-          <g class="traces" fill="none" stroke="url(#hg)" stroke-width="2.6" stroke-linecap="round">
-            <path class="trace" d="M24 12 V18"/><path class="trace" d="M12 37 L18.5 30.5"/><path class="trace" d="M36 37 L29.5 30.5"/></g>
-          <g stroke="url(#hg)" stroke-width="2.6" stroke-linecap="round">
-            <path d="M17 22 H12"/><path d="M17 26 H12"/><path d="M31 22 H36"/><path d="M31 26 H36"/></g>
-          <rect x="17" y="17" width="14" height="14" rx="4.2" fill="url(#hg)"/>
-          <rect x="20.5" y="20.5" width="7" height="7" rx="1.6" fill="#fff" opacity=".92"/>
-          <circle class="node" cx="24" cy="9" r="3.8" fill="url(#hg)"/>
-          <circle class="node" cx="10.5" cy="39" r="3.8" fill="url(#hg)"/>
-          <circle class="node" cx="37.5" cy="39" r="3.8" fill="url(#hg)"/>
+        <svg class="logo-svg" viewBox="0 0 48 48" width="34" height="34">
+          <defs>
+            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="7" y1="6" x2="42" y2="41">
+              <stop offset="0" stop-color="#1b56e0"/>
+              <stop offset=".58" stop-color="#06b6a4"/>
+              <stop offset="1" stop-color="#4dd9ff"/>
+            </linearGradient>
+          </defs>
+          <g class="traces" fill="none" stroke="url(#brandHeadGrad)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+            <path class="trace" d="M6.5 15.5h8.8l4.3 4.5"/>
+            <path class="trace" d="M41.5 15.5h-8.8l-4.3 4.5"/>
+            <path class="trace" d="M6.5 32.5h9.6l4.6-4.8"/>
+            <path class="trace" d="M41.5 32.5h-9.6l-4.6-4.8"/>
+            <path class="trace" d="M24 6.8v7.4"/>
+          </g>
+          <g class="pads" fill="url(#brandHeadGrad)">
+            <rect class="pad" x="3.6" y="12.8" width="5.4" height="5.4" rx="1.4"/>
+            <rect class="pad" x="39" y="12.8" width="5.4" height="5.4" rx="1.4"/>
+            <rect class="pad" x="3.6" y="29.8" width="5.4" height="5.4" rx="1.4"/>
+            <rect class="pad" x="39" y="29.8" width="5.4" height="5.4" rx="1.4"/>
+            <rect class="pad" x="21.3" y="3.7" width="5.4" height="5.4" rx="1.4"/>
+          </g>
+          <path class="apex-rise" d="M24 6.4 42.2 40.2h-8.3l-3.7-7.5H17.8l-3.7 7.5H5.8Z" fill="url(#brandHeadGrad)"/>
+          <path d="M20.4 27.1 24 18.4l3.6 8.7Z" fill="#fff" opacity=".94"/>
+          <path d="M18.8 31.2h10.4l-1.65-3.35h-7.1Z" fill="#fff" opacity=".68"/>
         </svg>
       </span>
       <span class="brand-text">APEX<small>주식회사 에이펙스</small></span>
@@ -94,20 +108,20 @@
 (function () {
   // ---- 로고 SVG 빌더 (48x48 기준 마크) ----
   function grad(id) {
-    return '<defs><linearGradient id="' + id + '" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="40" y2="40">' +
-      '<stop offset="0" stop-color="#1b56e0"/><stop offset="1" stop-color="#06b6a4"/></linearGradient></defs>';
+    return '<defs><linearGradient id="' + id + '" gradientUnits="userSpaceOnUse" x1="7" y1="6" x2="42" y2="41">' +
+      '<stop offset="0" stop-color="#1b56e0"/><stop offset=".58" stop-color="#06b6a4"/><stop offset="1" stop-color="#4dd9ff"/></linearGradient></defs>';
   }
   function mark(paint, core, tx, ty, sc) {
     return '<g transform="translate(' + tx + ',' + ty + ') scale(' + sc + ')">' +
-      '<g fill="none" stroke="' + paint + '" stroke-width="2.6" stroke-linecap="round">' +
-      '<path d="M24 12 V18"/><path d="M12 37 L18.5 30.5"/><path d="M36 37 L29.5 30.5"/></g>' +
-      '<g stroke="' + paint + '" stroke-width="2.6" stroke-linecap="round">' +
-      '<path d="M17 22 H12"/><path d="M17 26 H12"/><path d="M31 22 H36"/><path d="M31 26 H36"/></g>' +
-      '<rect x="17" y="17" width="14" height="14" rx="4.2" fill="' + paint + '"/>' +
-      '<rect x="20.5" y="20.5" width="7" height="7" rx="1.6" fill="' + core + '"/>' +
-      '<circle cx="24" cy="9" r="3.8" fill="' + paint + '"/>' +
-      '<circle cx="10.5" cy="39" r="3.8" fill="' + paint + '"/>' +
-      '<circle cx="37.5" cy="39" r="3.8" fill="' + paint + '"/></g>';
+      '<g fill="none" stroke="' + paint + '" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M6.5 15.5h8.8l4.3 4.5"/><path d="M41.5 15.5h-8.8l-4.3 4.5"/>' +
+      '<path d="M6.5 32.5h9.6l4.6-4.8"/><path d="M41.5 32.5h-9.6l-4.6-4.8"/><path d="M24 6.8v7.4"/></g>' +
+      '<g fill="' + paint + '"><rect x="3.6" y="12.8" width="5.4" height="5.4" rx="1.4"/>' +
+      '<rect x="39" y="12.8" width="5.4" height="5.4" rx="1.4"/><rect x="3.6" y="29.8" width="5.4" height="5.4" rx="1.4"/>' +
+      '<rect x="39" y="29.8" width="5.4" height="5.4" rx="1.4"/><rect x="21.3" y="3.7" width="5.4" height="5.4" rx="1.4"/></g>' +
+      '<path d="M24 6.4 42.2 40.2h-8.3l-3.7-7.5H17.8l-3.7 7.5H5.8Z" fill="' + paint + '"/>' +
+      '<path d="M20.4 27.1 24 18.4l3.6 8.7Z" fill="' + core + '" opacity=".94"/>' +
+      '<path d="M18.8 31.2h10.4l-1.65-3.35h-7.1Z" fill="' + core + '" opacity=".68"/></g>';
   }
   var FONT = "Pretendard, 'Malgun Gothic', Arial, sans-serif";
   function wordH(tc, sc) {
@@ -121,11 +135,11 @@
   // 변형 정의
   var INK = "#0e1726", MUTED = "#67768d";
   var VARIANTS = [
-    { key: "symbol", name: "심볼 마크", desc: "정사각 아이콘. 파비콘·프로필·앱 아이콘용.", dark: false,
+    { key: "symbol", name: "심볼 마크", desc: "APEX 상승형 칩/링크 심볼. 파비콘·프로필용.", dark: false,
       svg: svg("48 48", 48, 48, grad("gs") + mark("url(#gs)", "#fff", 0, 0, 1)) },
-    { key: "horizontal", name: "가로형 (기본)", desc: "가장 기본. 헤더·문서 상단용.", dark: false,
+    { key: "horizontal", name: "가로형 (기본)", desc: "공식 기본형. 헤더·문서 상단용.", dark: false,
       svg: svg("210 56", 210, 56, grad("gh") + mark("url(#gh)", "#fff", 4, 4, 1) + wordH(INK, MUTED)) },
-    { key: "vertical", name: "세로형", desc: "정사각에 가까운 공간·배너용.", dark: false,
+    { key: "vertical", name: "세로형", desc: "심볼을 강조하는 배너·프로필 공간용.", dark: false,
       svg: svg("150 124", 150, 124, grad("gv") + mark("url(#gv)", "#fff", 51, 6, 1) +
         '<text x="75" y="86" text-anchor="middle" font-family="' + FONT + '" font-weight="800" font-size="28" letter-spacing="1" fill="' + INK + '">APEX</text>' +
         '<text x="75" y="106" text-anchor="middle" font-family="' + FONT + '" font-weight="600" font-size="11" fill="' + MUTED + '">주식회사 에이펙스</text>') },

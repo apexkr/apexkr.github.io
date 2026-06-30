@@ -5,7 +5,7 @@
 :root{
   /* Surfaces */
   --bg:#ffffff;
-  --bg-alt:#f4f7fb;
+  --bg-alt:#f5f8fc;
   --panel:#ffffff;
   --line:#e4eaf2;
   /* Ink */
@@ -15,11 +15,14 @@
   /* Brand */
   --brand:#1b56e0;     /* 신뢰의 딥 블루 */
   --brand-2:#06b6a4;   /* 성장/혁신의 틸 */
-  --brand-grad:linear-gradient(135deg,#1b56e0,#06b6a4);
+  --accent:#ffb84d;    /* 신생 브랜드의 밝은 에너지 */
+  --accent-soft:#fff2da;
+  --brand-soft:#eaf4ff;
+  --brand-grad:linear-gradient(135deg,#1b56e0 0%,#06b6a4 58%,#4dd9ff 100%);
   --warn:#b5731a;
   /* Shape */
-  --radius:16px;
-  --radius-sm:11px;
+  --radius:14px;
+  --radius-sm:9px;
   --shadow:0 14px 40px rgba(16,30,60,.08);
   --shadow-lg:0 24px 70px rgba(16,30,60,.16);
   --maxw:1120px;
@@ -34,13 +37,13 @@ body{
   background:var(--bg);
   color:var(--ink);
   line-height:1.7;
-  letter-spacing:-.01em;
+  letter-spacing:0;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
 a{color:inherit;text-decoration:none}
 img,svg{display:block;max-width:100%}
-h1,h2,h3{line-height:1.25;letter-spacing:-.02em;margin:0}
+h1,h2,h3{line-height:1.25;letter-spacing:0;margin:0}
 p{margin:0}
 ul{margin:0;padding:0;list-style:none}
 b,strong{font-weight:700}

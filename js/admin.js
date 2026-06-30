@@ -1,7 +1,7 @@
 /* =========================================================
    admin.js — 관리자 대시보드
    탭: 개요 / 전자공고 / 회사정보·소개 / 게시(배포)
-   ⚠️ 정적 사이트라 비밀번호는 소스에 노출됨 → '관리 편의용 잠금'.
+   정적 사이트라 비밀번호는 소스에 노출됨 → '관리 편의용 잠금'.
       실제 게시: [게시] 탭에서 JSON 생성 → data/*.json 교체 → 배포(commit/push).
    ========================================================= */
 window.APEX = window.APEX || {};
@@ -153,7 +153,7 @@ window.APEX = window.APEX || {};
     $("copyBtn").addEventListener("click", () => {
       const box = $("exportBox"); box.select();
       navigator.clipboard.writeText(box.value).then(() => {
-        $("copyBtn").textContent = "✅ 복사됨"; setTimeout(() => ($("copyBtn").textContent = "📋 복사"), 1500);
+        $("copyBtn").textContent = "복사됨"; setTimeout(() => ($("copyBtn").textContent = "복사"), 1500);
       });
     });
     $("resetBtn").addEventListener("click", () => {

@@ -22,19 +22,31 @@
   <div class="wrap nav">
     <a class="brand" href="#hero" aria-label="APEX 홈">
       <span class="brand-mark" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 48 48" width="30" height="30">
-          <defs><linearGradient id="apexGrad" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="40" y2="40"><stop offset="0" stop-color="#1b56e0"/><stop offset="1" stop-color="#06b6a4"/></linearGradient></defs>
-          <g class="traces" fill="none" stroke="url(#apexGrad)" stroke-width="2.6" stroke-linecap="round">
-            <path class="trace" d="M24 12 V18"/><path class="trace" d="M12 37 L18.5 30.5"/><path class="trace" d="M36 37 L29.5 30.5"/>
+        <svg class="logo-svg" viewBox="0 0 48 48" width="34" height="34">
+          <defs>
+            <linearGradient id="apexGrad" gradientUnits="userSpaceOnUse" x1="7" y1="6" x2="42" y2="41">
+              <stop offset="0" stop-color="#1b56e0"/>
+              <stop offset=".58" stop-color="#06b6a4"/>
+              <stop offset="1" stop-color="#4dd9ff"/>
+            </linearGradient>
+          </defs>
+          <g class="traces" fill="none" stroke="url(#apexGrad)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+            <path class="trace" d="M6.5 15.5h8.8l4.3 4.5"/>
+            <path class="trace" d="M41.5 15.5h-8.8l-4.3 4.5"/>
+            <path class="trace" d="M6.5 32.5h9.6l4.6-4.8"/>
+            <path class="trace" d="M41.5 32.5h-9.6l-4.6-4.8"/>
+            <path class="trace" d="M24 6.8v7.4"/>
           </g>
-          <g stroke="url(#apexGrad)" stroke-width="2.6" stroke-linecap="round">
-            <path d="M17 22 H12"/><path d="M17 26 H12"/><path d="M31 22 H36"/><path d="M31 26 H36"/>
+          <g class="pads" fill="url(#apexGrad)">
+            <rect class="pad" x="3.6" y="12.8" width="5.4" height="5.4" rx="1.4"/>
+            <rect class="pad" x="39" y="12.8" width="5.4" height="5.4" rx="1.4"/>
+            <rect class="pad" x="3.6" y="29.8" width="5.4" height="5.4" rx="1.4"/>
+            <rect class="pad" x="39" y="29.8" width="5.4" height="5.4" rx="1.4"/>
+            <rect class="pad" x="21.3" y="3.7" width="5.4" height="5.4" rx="1.4"/>
           </g>
-          <rect x="17" y="17" width="14" height="14" rx="4.2" fill="url(#apexGrad)"/>
-          <rect x="20.5" y="20.5" width="7" height="7" rx="1.6" fill="#fff" opacity=".92"/>
-          <circle class="node" cx="24" cy="9" r="3.8" fill="url(#apexGrad)"/>
-          <circle class="node" cx="10.5" cy="39" r="3.8" fill="url(#apexGrad)"/>
-          <circle class="node" cx="37.5" cy="39" r="3.8" fill="url(#apexGrad)"/>
+          <path class="apex-rise" d="M24 6.4 42.2 40.2h-8.3l-3.7-7.5H17.8l-3.7 7.5H5.8Z" fill="url(#apexGrad)"/>
+          <path d="M20.4 27.1 24 18.4l3.6 8.7Z" fill="#fff" opacity=".94"/>
+          <path d="M18.8 31.2h10.4l-1.65-3.35h-7.1Z" fill="#fff" opacity=".68"/>
         </svg>
       </span>
       <span class="brand-text">APEX<small>주식회사 에이펙스</small></span>
@@ -58,23 +70,76 @@
   <section class="hero" id="hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="wrap hero-inner">
-      <p class="kicker reveal" id="heroKicker" data-reveal>EMBEDDED · EDGE · PLATFORM</p>
-      <h1 class="reveal" id="heroTitle" data-reveal data-reveal-delay="1">
-        하드웨어에서 <span class="grad">플랫폼</span>까지,<br>경계를 넓히는 임베디드 기술
-      </h1>
-      <p class="hero-lead reveal" id="heroLead" data-reveal data-reveal-delay="2">
-        주식회사 에이펙스는 검증된 임베디드 하드웨어 공급에서 출발해,
-        지능형 제어 소프트웨어와 엣지 컴퓨팅을 거쳐 통합 모니터링 플랫폼으로 진화합니다.
-      </p>
-      <div class="hero-btns reveal" data-reveal data-reveal-delay="3">
-        <a class="btn primary" href="#vision">비전 로드맵 보기</a>
-        <a class="btn ghost" href="#biz">사업영역</a>
+      <div class="hero-copy">
+        <p class="kicker reveal" id="heroKicker" data-reveal>NEW BORN EMBEDDED · DEVICE LINKAGE · EDGE</p>
+        <h1 class="reveal" id="heroTitle" data-reveal data-reveal-delay="1">
+          디바이스를 잇고,<br><span class="grad">데이터를 깨우는</span> 임베디드 기술
+        </h1>
+        <p class="hero-lead reveal" id="heroLead" data-reveal data-reveal-delay="2">
+          주식회사 에이펙스는 검증된 하드웨어와 펌웨어, 엣지 컴퓨팅을 하나의 연결 구조로 묶어
+          현장의 데이터를 플랫폼 가치로 확장합니다.
+        </p>
+        <div class="hero-btns reveal" data-reveal data-reveal-delay="3">
+          <a class="btn primary" href="#vision">비전 로드맵 보기</a>
+          <a class="btn ghost" href="#biz">사업영역</a>
+        </div>
+        <ul class="hero-stats reveal" data-reveal data-reveal-delay="4">
+          <li><b>Device Linkage</b><span>센서·MCU·엣지 연결</span></li>
+          <li><b>HW→Edge→Platform</b><span>수직 통합 기술</span></li>
+          <li><b>2026</b><span>새롭게 태어난 기술 파트너</span></li>
+        </ul>
       </div>
-      <ul class="hero-stats reveal" data-reveal data-reveal-delay="4">
-        <li><b data-count="3">3</b><span>단계 성장 로드맵</span></li>
-        <li><b>HW→SW→Platform</b><span>수직 통합 기술</span></li>
-        <li><b>B2B</b><span>연구기관·산업현장 파트너십</span></li>
-      </ul>
+      <div class="hero-visual reveal" data-reveal data-reveal-delay="2" aria-hidden="true">
+        <svg class="network-svg" viewBox="0 0 540 420">
+          <defs>
+            <linearGradient id="networkLine" x1="62" y1="64" x2="500" y2="340" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#1b56e0"/>
+              <stop offset=".55" stop-color="#06b6a4"/>
+              <stop offset="1" stop-color="#ffb84d"/>
+            </linearGradient>
+            <linearGradient id="deviceFill" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffffff"/>
+              <stop offset="1" stop-color="#eef6ff"/>
+            </linearGradient>
+            <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="7" result="blur"/>
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.1 0 0 0 0 0.48 0 0 0 0 0.8 0 0 0 .32 0"/>
+              <feBlend in="SourceGraphic"/>
+            </filter>
+          </defs>
+          <path class="network-back" d="M62 116C150 54 229 92 283 145s126 79 195 3"/>
+          <path class="network-back" d="M72 294c80-58 151-70 219-24s126 57 184 3"/>
+          <path class="network-main" d="M92 238c76-126 171-154 254-82 55 48 86 117 132 148"/>
+          <g class="orbit" filter="url(#softGlow)">
+            <circle class="spark spark-a" cx="96" cy="238" r="4.2"/>
+            <circle class="spark spark-b" cx="284" cy="145" r="4.2"/>
+            <circle class="spark spark-c" cx="475" cy="303" r="4.2"/>
+          </g>
+          <g class="device sensor" transform="translate(54 204)">
+            <rect class="device-shell" width="96" height="68" rx="16"/>
+            <path class="device-pin" d="M17 23h16M17 45h16M63 23h16M63 45h16"/>
+            <rect class="device-core" x="34" y="20" width="28" height="28" rx="6"/>
+            <text x="48" y="58" text-anchor="middle">SENSOR</text>
+          </g>
+          <g class="device mcu" transform="translate(217 132)">
+            <rect class="device-shell strong" width="112" height="92" rx="18"/>
+            <path class="device-pin" d="M12 26h18M12 46h18M12 66h18M82 26h18M82 46h18M82 66h18"/>
+            <rect class="device-core" x="36" y="24" width="40" height="40" rx="8"/>
+            <path class="device-trace" d="M46 44h20M56 34v20"/>
+            <text x="56" y="79" text-anchor="middle">MCU</text>
+          </g>
+          <g class="device edge" transform="translate(388 255)">
+            <rect class="device-shell" width="104" height="74" rx="17"/>
+            <path class="device-pin" d="M16 24h18M16 50h18M70 24h18M70 50h18"/>
+            <path class="edge-core" d="M52 16l23 21-23 21-23-21Z"/>
+            <text x="52" y="62" text-anchor="middle">EDGE</text>
+          </g>
+          <g class="cloud-node" transform="translate(410 82)">
+            <path d="M40 58H17C7.6 58 0 50.8 0 41.8c0-8.2 6.3-15 14.4-15.9C18 14.8 28.2 7 40 7c13.7 0 25.1 9.5 28 22.3C77.1 30 84 36.8 84 45.1 84 52.2 78 58 70.5 58Z"/>
+            <text x="42" y="42" text-anchor="middle">PLATFORM</text>
+          </g>
+        </svg>
+      </div>
     </div>
   </section>
 
@@ -82,26 +147,26 @@
   <section id="about" class="section">
     <div class="wrap">
       <p class="eyebrow reveal" data-reveal>About</p>
-      <h2 class="title reveal" id="aboutTitle" data-reveal data-reveal-delay="1">단순 공급을 넘어, 데이터의 가치를 잇는 회사</h2>
+      <h2 class="title reveal" id="aboutTitle" data-reveal data-reveal-delay="1">새로운 출발점에서, 하드웨어와 데이터를 잇는 회사</h2>
       <p class="lead reveal" id="aboutLead" data-reveal data-reveal-delay="2">
         에이펙스(APEX Co., Ltd.)는 임베디드 하드웨어 소싱을 기반으로 시작해, 자체 펌웨어·제어 기술과
-        엣지 컴퓨팅 역량을 더해 <b>하드웨어부터 데이터까지 잇는 턴키(Turn-key) 솔루션</b>을 제공하는
+        엣지 컴퓨팅 역량을 더해 <b>디바이스, 제어 로직, 데이터를 하나의 흐름으로 잇는 턴키(Turn-key) 솔루션</b>을 제공하는
         임베디드 기술 기업입니다. 글로벌 시장에서 검증된 핵심 부품의 안정적 공급망과
         현장 신뢰성을 갖춘 소프트웨어를 결합해, 고객사의 개발 기간을 단축하고 기술적 난제를 해결합니다.
       </p>
       <div class="pillars">
         <div class="pillar reveal" data-reveal data-reveal-delay="1">
-          <span class="pillar-ic" aria-hidden="true">◆</span>
+          <span class="pillar-ic pillar-ic-precision" aria-hidden="true"></span>
           <h3>기술 신뢰성</h3>
           <p>산업 표준 통신과 고정밀 센서 제어에 최적화된 검증된 하드웨어·펌웨어.</p>
         </div>
         <div class="pillar reveal" data-reveal data-reveal-delay="2">
-          <span class="pillar-ic" aria-hidden="true">▲</span>
+          <span class="pillar-ic pillar-ic-link" aria-hidden="true"></span>
           <h3>수직 통합</h3>
           <p>부품 소싱 → 임베디드 S/W → 엣지·플랫폼까지 한 흐름으로 연결.</p>
         </div>
         <div class="pillar reveal" data-reveal data-reveal-delay="3">
-          <span class="pillar-ic" aria-hidden="true">●</span>
+          <span class="pillar-ic pillar-ic-scale" aria-hidden="true"></span>
           <h3>확장 가능성</h3>
           <p>유통에서 출발해 구독형 모니터링 플랫폼(SaaS)으로 진화하는 사업 모델.</p>
         </div>
@@ -172,17 +237,17 @@
       <p class="lead reveal" data-reveal data-reveal-delay="2">로드맵을 실현하는 세 가지 핵심 사업 축입니다.</p>
       <div class="cards">
         <article class="card reveal" data-reveal data-reveal-delay="1">
-          <span class="card-ic" aria-hidden="true">🔌</span>
+          <span class="card-ic card-ic-hardware" aria-hidden="true"></span>
           <h3>하드웨어 인프라 · 소싱</h3>
           <p>임베디드 보드, MCU, 통신·센서 모듈의 검증된 공급망과 맞춤형 개발 키트 제공.</p>
         </article>
         <article class="card reveal" data-reveal data-reveal-delay="2">
-          <span class="card-ic" aria-hidden="true">⚙️</span>
+          <span class="card-ic card-ic-edge" aria-hidden="true"></span>
           <h3>임베디드 S/W · 엣지</h3>
           <p>산업 표준 통신·센서 제어 펌웨어 자체 개발과 현장 엣지 컴퓨팅 솔루션.</p>
         </article>
         <article class="card reveal" data-reveal data-reveal-delay="3">
-          <span class="card-ic" aria-hidden="true">📊</span>
+          <span class="card-ic card-ic-platform" aria-hidden="true"></span>
           <h3>통합 모니터링 플랫폼</h3>
           <p>실시간 데이터 수집·시각화, 이상 감지·예측 유지보수, 구독형 SaaS 확장.</p>
         </article>
@@ -263,7 +328,7 @@
       공고 홈페이지 https://apexkr.github.io<br>
       © 2026 APEX Co., Ltd. All rights reserved.<br>
       <a href="brand.html" style="color:var(--brand)">브랜드 · 로고</a> ·
-      <button class="admin-link" id="adminLink">🔒 관리자</button>
+      <button class="admin-link" id="adminLink">관리자</button>
     </div>
   </div>
 </footer>
@@ -286,7 +351,7 @@
   <div class="dash">
     <div class="dash-head">
       <div class="dash-title">
-        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28" width="22" height="22"><path d="M14 3 L25 24 L17 24 L14 17 L11 24 L3 24 Z" fill="url(#bg2)"/><defs><linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b56e0"/><stop offset="1" stop-color="#06b6a4"/></linearGradient></defs></svg></span>
+        <span class="brand-mark" aria-hidden="true"><svg class="logo-svg" viewBox="0 0 48 48" width="23" height="23"><defs><linearGradient id="dashGrad" gradientUnits="userSpaceOnUse" x1="7" y1="6" x2="42" y2="41"><stop offset="0" stop-color="#1b56e0"/><stop offset=".58" stop-color="#06b6a4"/><stop offset="1" stop-color="#4dd9ff"/></linearGradient></defs><g fill="none" stroke="url(#dashGrad)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path class="trace" d="M6.5 15.5h8.8l4.3 4.5"/><path class="trace" d="M41.5 15.5h-8.8l-4.3 4.5"/><path class="trace" d="M6.5 32.5h9.6l4.6-4.8"/><path class="trace" d="M41.5 32.5h-9.6l-4.6-4.8"/><path class="trace" d="M24 6.8v7.4"/></g><path class="apex-rise" d="M24 6.4 42.2 40.2h-8.3l-3.7-7.5H17.8l-3.7 7.5H5.8Z" fill="url(#dashGrad)"/><path d="M20.4 27.1 24 18.4l3.6 8.7Z" fill="#fff" opacity=".94"/><path d="M18.8 31.2h10.4l-1.65-3.35h-7.1Z" fill="#fff" opacity=".68"/></svg></span>
         APEX 관리자 대시보드
       </div>
       <div class="dash-head-actions">
@@ -296,13 +361,13 @@
     </div>
     <div class="dash-body">
       <nav class="dash-side" aria-label="관리 메뉴">
-        <button class="dash-nav active" data-tab="overview">📊 개요</button>
-        <button class="dash-nav" data-tab="notices">📢 전자공고</button>
-        <button class="dash-nav" data-tab="site">🏢 회사정보·소개</button>
-        <button class="dash-nav" data-tab="publish">🚀 게시(배포)</button>
+        <button class="dash-nav active" data-tab="overview">개요</button>
+        <button class="dash-nav" data-tab="notices">전자공고</button>
+        <button class="dash-nav" data-tab="site">회사정보·소개</button>
+        <button class="dash-nav" data-tab="publish">게시(배포)</button>
       </nav>
       <div class="dash-main">
-        <p class="admin-banner">⚠️ 편집 내용은 <b>이 브라우저에만 임시 저장(미리보기)</b>됩니다. 실제 게시는
+        <p class="admin-banner">편집 내용은 <b>이 브라우저에만 임시 저장(미리보기)</b>됩니다. 실제 게시는
           <b>[게시(배포)]</b> 탭에서 JSON을 생성해 <code>data/*.json</code> 교체 후 배포(commit·push)해야 반영됩니다.</p>
 
         <!-- 개요 -->
@@ -373,7 +438,7 @@
           <div class="admin-actions">
             <button class="btn-sm primary" id="exportNoticesBtn">data/notices.json 생성</button>
             <button class="btn-sm primary" id="exportSiteBtn">data/site.json 생성</button>
-            <button class="btn-sm" id="copyBtn" hidden>📋 복사</button>
+            <button class="btn-sm" id="copyBtn" hidden>복사</button>
           </div>
           <p id="exportLabel" class="dash-note" hidden></p>
           <textarea id="exportBox" readonly hidden></textarea>
