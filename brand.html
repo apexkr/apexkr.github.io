@@ -43,19 +43,18 @@
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="APEX 홈">
       <span class="brand-mark" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 48 48" width="32" height="32">
+        <svg class="logo-svg" viewBox="0 0 48 48" width="34" height="34">
           <defs>
-            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="7" y1="7" x2="41" y2="41">
+            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="6" y1="6" x2="42" y2="42">
               <stop offset="0" stop-color="#1b56e0"/>
-              <stop offset=".62" stop-color="#06b6a4"/>
+              <stop offset=".58" stop-color="#06b6a4"/>
               <stop offset="1" stop-color="#4dd9ff"/>
             </linearGradient>
           </defs>
-          <path class="apex-mark" d="M24 4.8 41.5 15.2v17.6L24 43.2 6.5 32.8V15.2Z" fill="url(#brandHeadGrad)"/>
-          <path class="apex-link" d="M15.7 27.6 24 17.2l8.3 10.4" fill="none" stroke="#fff" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round" opacity=".94"/>
-          <rect x="12.3" y="24.2" width="6.8" height="6.8" rx="1.7" fill="#fff"/>
-          <rect x="20.6" y="13.8" width="6.8" height="6.8" rx="1.7" fill="#fff"/>
-          <rect x="28.9" y="24.2" width="6.8" height="6.8" rx="1.7" fill="#fff"/>
+          <rect x="5" y="5" width="38" height="38" rx="11" fill="url(#brandHeadGrad)"/>
+          <path d="M15.5 33.5 24 14.5 32.5 33.5" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19.1 26.6 H28.9" stroke="#fff" stroke-width="3.1" stroke-linecap="round"/>
+          <circle cx="24" cy="14.5" r="2.8" fill="#fff"/>
         </svg>
       </span>
       <span class="brand-text"><span class="brand-word">APEX</span><small>주식회사 에이펙스</small></span>
@@ -69,8 +68,8 @@
     <a class="back-link" href="index.html">← 홈으로 돌아가기</a>
     <p class="eyebrow">Brand Assets</p>
     <h1 class="title">브랜드 · 로고</h1>
-    <p class="lead">세 개의 임베디드 노드가 위로 연결되는 APEX 고유의 디바이스 링크 심볼입니다.
-      벡터(SVG)는 인쇄·확대에, PNG는 문서·웹에 적합합니다.</p>
+    <p class="lead">정점(Apex)을 향하는 'A'를 칩 위에 새긴 엠블럼과 APEX 워드마크로 구성된 로고입니다.
+      용도에 맞게 내려받으세요. 벡터(SVG)는 인쇄·확대에, PNG는 문서·웹에 적합합니다.</p>
   </div>
 </section>
 
@@ -97,43 +96,48 @@
 
 <script>
 (function () {
-  // ---- 로고 SVG 빌더 (48x48 기준 마크) ----
-  function grad(id) {
-    return '<defs><linearGradient id="' + id + '" gradientUnits="userSpaceOnUse" x1="8" y1="6" x2="40" y2="42">' +
-      '<stop offset="0" stop-color="#1b56e0"/><stop offset=".62" stop-color="#06b6a4"/><stop offset="1" stop-color="#4dd9ff"/></linearGradient></defs>';
+  // ---- 로고 SVG 빌더 ----
+  // 그라데이션 정의(userSpaceOnUse: 직선·텍스트에도 안정적으로 적용)
+  function gdef(id, x1, y1, x2, y2) {
+    return '<linearGradient id="' + id + '" gradientUnits="userSpaceOnUse" x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '">' +
+      '<stop offset="0" stop-color="#1b56e0"/><stop offset=".58" stop-color="#06b6a4"/><stop offset="1" stop-color="#4dd9ff"/></linearGradient>';
   }
-  function mark(paint, core, tx, ty, sc) {
+  // A 피크 칩 엠블럼 (48x48 로컬 좌표)
+  function emblem(tile, glyph, tx, ty, sc) {
     return '<g transform="translate(' + tx + ',' + ty + ') scale(' + sc + ')">' +
-      '<path d="M24 4.8 41.5 15.2v17.6L24 43.2 6.5 32.8V15.2Z" fill="' + paint + '"/>' +
-      '<path d="M15.7 27.6 24 17.2l8.3 10.4" fill="none" stroke="' + core + '" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round" opacity=".94"/>' +
-      '<rect x="12.3" y="24.2" width="6.8" height="6.8" rx="1.7" fill="' + core + '"/>' +
-      '<rect x="20.6" y="13.8" width="6.8" height="6.8" rx="1.7" fill="' + core + '"/>' +
-      '<rect x="28.9" y="24.2" width="6.8" height="6.8" rx="1.7" fill="' + core + '"/></g>';
+      '<rect x="5" y="5" width="38" height="38" rx="11" fill="' + tile + '"/>' +
+      '<path d="M15.5 33.5 24 14.5 32.5 33.5" fill="none" stroke="' + glyph + '" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<path d="M19.1 26.6 H28.9" stroke="' + glyph + '" stroke-width="3.1" stroke-linecap="round"/>' +
+      '<circle cx="24" cy="14.5" r="2.8" fill="' + glyph + '"/></g>';
   }
-  var FONT = "Manrope, Aptos Display, Segoe UI Variable Display, Pretendard, Arial, sans-serif";
-  function wordH(tc, sc) {
-    return '<text x="60" y="32" font-family="' + FONT + '" font-weight="800" font-size="28" letter-spacing="0" fill="' + tc + '">APEX</text>' +
-      '<text x="61" y="47" font-family="Pretendard, Malgun Gothic, Arial, sans-serif" font-weight="650" font-size="10.5" letter-spacing="0" fill="' + sc + '">주식회사 에이펙스</text>';
+  var FONT = "Manrope, Aptos Display, Pretendard, Arial, sans-serif";
+  var SUBFONT = "Pretendard, Malgun Gothic, Arial, sans-serif";
+  function apexWord(x, y, fs, fill, anchor) {
+    return '<text x="' + x + '" y="' + y + '"' + (anchor ? ' text-anchor="' + anchor + '"' : '') +
+      ' font-family="' + FONT + '" font-weight="800" font-size="' + fs + '" letter-spacing="0.5" fill="' + fill + '">APEX</text>';
+  }
+  function sub(x, y, fill, anchor) {
+    return '<text x="' + x + '" y="' + y + '"' + (anchor ? ' text-anchor="' + anchor + '"' : '') +
+      ' font-family="' + SUBFONT + '" font-weight="650" font-size="10.5" fill="' + fill + '">주식회사 에이펙스</text>';
   }
   function svg(vb, w, h, inner) {
     return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + vb + '" width="' + w + '" height="' + h + '">' + inner + '</svg>';
   }
 
-  // 변형 정의
   var INK = "#0e1726", MUTED = "#67768d";
   var VARIANTS = [
-    { key: "symbol", name: "심볼 마크", desc: "디바이스 링크 피크 심볼. 파비콘·프로필용.", dark: false,
-      svg: svg("48 48", 48, 48, grad("gs") + mark("url(#gs)", "#fff", 0, 0, 1)) },
-    { key: "horizontal", name: "가로형 (기본)", desc: "공식 기본형. 헤더·문서 상단용.", dark: false,
-      svg: svg("210 56", 210, 56, grad("gh") + mark("url(#gh)", "#fff", 4, 4, 1) + wordH(INK, MUTED)) },
-    { key: "vertical", name: "세로형", desc: "디바이스 링크 심볼과 APEX 텍스트를 세로로 정리한 버전.", dark: false,
-      svg: svg("150 124", 150, 124, grad("gv") + mark("url(#gv)", "#fff", 51, 6, 1) +
-        '<text x="75" y="86" text-anchor="middle" font-family="' + FONT + '" font-weight="800" font-size="29" letter-spacing="0" fill="' + INK + '">APEX</text>' +
-        '<text x="75" y="106" text-anchor="middle" font-family="' + FONT + '" font-weight="600" font-size="11" fill="' + MUTED + '">주식회사 에이펙스</text>') },
+    { key: "symbol", name: "심볼 마크", desc: "A 피크 칩 엠블럼. 파비콘·프로필·앱 아이콘용.", dark: false,
+      svg: svg("48 48", 48, 48, '<defs>' + gdef("gs", 6, 6, 42, 42) + '</defs>' + emblem("url(#gs)", "#fff", 0, 0, 1)) },
+    { key: "horizontal", name: "가로형 (기본)", desc: "엠블럼 + APEX 워드마크. 공식 기본형.", dark: false,
+      svg: svg("236 60", 236, 60, '<defs>' + gdef("ge", 10, 10, 46, 46) + gdef("gw", 70, 18, 214, 44) + '</defs>' +
+        emblem("url(#ge)", "#fff", 6, 6, 1) + apexWord(70, 39, 30, "url(#gw)") + sub(71, 52, MUTED)) },
+    { key: "vertical", name: "세로형", desc: "엠블럼 위, APEX 아래로 정렬한 버전.", dark: false,
+      svg: svg("168 140", 168, 140, '<defs>' + gdef("gev", 60, 8, 108, 56) + gdef("gwv", 46, 86, 122, 114) + '</defs>' +
+        emblem("url(#gev)", "#fff", 60, 6, 1) + apexWord(84, 106, 31, "url(#gwv)", "middle") + sub(84, 124, MUTED, "middle")) },
     { key: "mono-black", name: "단색 (블랙)", desc: "팩스·도장·단색 인쇄·계약서용.", dark: false,
-      svg: svg("210 56", 210, 56, mark(INK, "#fff", 4, 4, 1) + wordH(INK, INK)) },
+      svg: svg("236 60", 236, 60, emblem(INK, "#fff", 6, 6, 1) + apexWord(70, 39, 30, INK) + sub(71, 52, INK)) },
     { key: "white", name: "화이트 (역상)", desc: "어두운 배경·사진 위에 사용.", dark: true,
-      svg: svg("210 56", 210, 56, mark("#ffffff", "rgba(14,23,38,.92)", 4, 4, 1) + wordH("#ffffff", "rgba(255,255,255,.72)")) }
+      svg: svg("236 60", 236, 60, emblem("#ffffff", "#0e1726", 6, 6, 1) + apexWord(70, 39, 30, "#ffffff") + sub(71, 52, "rgba(255,255,255,.72)")) }
   ];
 
   // ---- 다운로드 ----
