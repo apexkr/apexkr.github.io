@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>브랜드 · 로고 | 주식회사 에이펙스</title>
-<meta name="description" content="주식회사 에이펙스(APEX) 로고·브랜드 자산 다운로드 — 디바이스 링크 심볼, 가로형, 세로형, 단색, 화이트 버전 (SVG·PNG)." />
+<meta name="description" content="주식회사 에이펙스(APEX) 로고·브랜드 자산 다운로드 — 모노라인 APEX 심볼, 가로형, 세로형, 단색, 화이트 버전 (SVG·PNG)." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,21 +44,25 @@
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="APEX 홈">
       <span class="brand-mark" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 48 48" width="34" height="34">
+        <svg class="logo-svg" viewBox="0 0 174 82" height="30" role="img" aria-label="APEX">
           <defs>
-            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="6" y1="6" x2="42" y2="42">
+            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="8" y1="14" x2="166" y2="72">
               <stop offset="0" stop-color="#1b56e0"/>
               <stop offset=".58" stop-color="#06b6a4"/>
               <stop offset="1" stop-color="#4dd9ff"/>
             </linearGradient>
           </defs>
-          <rect x="5" y="5" width="38" height="38" rx="11" fill="url(#brandHeadGrad)"/>
-          <path d="M15.5 33.5 24 14.5 32.5 33.5" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M19.1 26.6 H28.9" stroke="#fff" stroke-width="3.1" stroke-linecap="round"/>
-          <circle cx="24" cy="14.5" r="2.8" fill="#fff"/>
+          <g fill="none" stroke="url(#brandHeadGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 58 26 14 44 58"/><path d="M15.5 43 H36.5"/>
+            <path d="M56 14 V58"/><path d="M56 14 H72 C82 14 82 35 72 35 H56"/>
+            <path d="M92 14 V58"/><path d="M92 14 H120"/><path d="M92 35 H114"/><path d="M92 58 H120"/>
+            <path d="M132 14 166 58"/><path d="M166 14 132 58"/>
+          </g>
+          <path d="M8 74 H166" stroke="url(#brandHeadGrad)" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
+          <g fill="url(#brandHeadGrad)"><circle cx="26" cy="74" r="3"/><circle cx="64" cy="74" r="3"/><circle cx="106" cy="74" r="3"/><circle cx="149" cy="74" r="3"/></g>
         </svg>
       </span>
-      <span class="brand-text"><span class="brand-word">APEX</span><small>주식회사 에이펙스</small></span>
+      <span class="brand-text"><small>주식회사 에이펙스</small></span>
     </a>
     <nav aria-label="주요 메뉴"><ul><li><a href="index.html">홈으로</a></li></ul></nav>
   </div>
@@ -68,7 +73,7 @@
     <a class="back-link" href="index.html">← 홈으로 돌아가기</a>
     <p class="eyebrow">Brand Assets</p>
     <h1 class="title">브랜드 · 로고</h1>
-    <p class="lead">정점(Apex)을 향하는 'A'를 칩 위에 새긴 엠블럼과 APEX 워드마크로 구성된 로고입니다.
+    <p class="lead">A·P·E·X 네 글자를 하나의 모노라인으로 그리고 회로 라인으로 연결한 로고입니다.
       용도에 맞게 내려받으세요. 벡터(SVG)는 인쇄·확대에, PNG는 문서·웹에 적합합니다.</p>
   </div>
 </section>
@@ -96,48 +101,48 @@
 
 <script>
 (function () {
-  // ---- 로고 SVG 빌더 ----
-  // 그라데이션 정의(userSpaceOnUse: 직선·텍스트에도 안정적으로 적용)
+  // ---- 로고 SVG 빌더 (모노라인 APEX) ----
   function gdef(id, x1, y1, x2, y2) {
     return '<linearGradient id="' + id + '" gradientUnits="userSpaceOnUse" x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '">' +
       '<stop offset="0" stop-color="#1b56e0"/><stop offset=".58" stop-color="#06b6a4"/><stop offset="1" stop-color="#4dd9ff"/></linearGradient>';
   }
-  // A 피크 칩 엠블럼 (48x48 로컬 좌표)
-  function emblem(tile, glyph, tx, ty, sc) {
+  // A·P·E·X 모노라인 글자 (x 8..166, 글자 y14..58, 베이스라인 y74)
+  var LETTERS = ["M8 58 26 14 44 58", "M15.5 43 H36.5", "M56 14 V58", "M56 14 H72 C82 14 82 35 72 35 H56",
+    "M92 14 V58", "M92 14 H120", "M92 35 H114", "M92 58 H120", "M132 14 166 58", "M166 14 132 58"];
+  function mono(paint, tx, ty, sc) {
+    var L = LETTERS.map(function (d) { return '<path d="' + d + '"/>'; }).join("");
+    var nodes = [26, 64, 106, 149].map(function (x) { return '<circle cx="' + x + '" cy="74" r="3"/>'; }).join("");
     return '<g transform="translate(' + tx + ',' + ty + ') scale(' + sc + ')">' +
-      '<rect x="5" y="5" width="38" height="38" rx="11" fill="' + tile + '"/>' +
-      '<path d="M15.5 33.5 24 14.5 32.5 33.5" fill="none" stroke="' + glyph + '" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-      '<path d="M19.1 26.6 H28.9" stroke="' + glyph + '" stroke-width="3.1" stroke-linecap="round"/>' +
-      '<circle cx="24" cy="14.5" r="2.8" fill="' + glyph + '"/></g>';
+      '<g fill="none" stroke="' + paint + '" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">' + L + '</g>' +
+      '<path d="M8 74 H166" stroke="' + paint + '" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>' +
+      '<g fill="' + paint + '">' + nodes + '</g></g>';
   }
-  var FONT = "Manrope, Aptos Display, Pretendard, Arial, sans-serif";
+  // 정사각 심볼: 라운드 칩 + 모노라인 A
+  function symbolTile(tile, glyph) {
+    return '<rect x="3" y="3" width="42" height="42" rx="12" fill="' + tile + '"/>' +
+      '<g fill="none" stroke="' + glyph + '" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M13.5 35 24 12 34.5 35"/><path d="M18.6 27.6 H29.4"/></g><circle cx="24" cy="12" r="2.3" fill="' + glyph + '"/>';
+  }
   var SUBFONT = "Pretendard, Malgun Gothic, Arial, sans-serif";
-  function apexWord(x, y, fs, fill, anchor) {
-    return '<text x="' + x + '" y="' + y + '"' + (anchor ? ' text-anchor="' + anchor + '"' : '') +
-      ' font-family="' + FONT + '" font-weight="800" font-size="' + fs + '" letter-spacing="0.5" fill="' + fill + '">APEX</text>';
-  }
   function sub(x, y, fill, anchor) {
     return '<text x="' + x + '" y="' + y + '"' + (anchor ? ' text-anchor="' + anchor + '"' : '') +
-      ' font-family="' + SUBFONT + '" font-weight="650" font-size="10.5" fill="' + fill + '">주식회사 에이펙스</text>';
+      ' font-family="' + SUBFONT + '" font-weight="650" font-size="12" letter-spacing="1" fill="' + fill + '">주식회사 에이펙스</text>';
   }
   function svg(vb, w, h, inner) {
     return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + vb + '" width="' + w + '" height="' + h + '">' + inner + '</svg>';
   }
 
-  var INK = "#0e1726", MUTED = "#67768d";
   var VARIANTS = [
-    { key: "symbol", name: "심볼 마크", desc: "A 피크 칩 엠블럼. 파비콘·프로필·앱 아이콘용.", dark: false,
-      svg: svg("48 48", 48, 48, '<defs>' + gdef("gs", 6, 6, 42, 42) + '</defs>' + emblem("url(#gs)", "#fff", 0, 0, 1)) },
-    { key: "horizontal", name: "가로형 (기본)", desc: "엠블럼 + APEX 워드마크. 공식 기본형.", dark: false,
-      svg: svg("236 60", 236, 60, '<defs>' + gdef("ge", 10, 10, 46, 46) + gdef("gw", 70, 18, 214, 44) + '</defs>' +
-        emblem("url(#ge)", "#fff", 6, 6, 1) + apexWord(70, 39, 30, "url(#gw)") + sub(71, 52, MUTED)) },
-    { key: "vertical", name: "세로형", desc: "엠블럼 위, APEX 아래로 정렬한 버전.", dark: false,
-      svg: svg("168 140", 168, 140, '<defs>' + gdef("gev", 60, 8, 108, 56) + gdef("gwv", 46, 86, 122, 114) + '</defs>' +
-        emblem("url(#gev)", "#fff", 60, 6, 1) + apexWord(84, 106, 31, "url(#gwv)", "middle") + sub(84, 124, MUTED, "middle")) },
+    { key: "symbol", name: "심볼 마크", desc: "모노라인 A 칩. 파비콘·프로필·앱 아이콘용.", dark: false,
+      svg: svg("48 48", 48, 48, '<defs>' + gdef("gs", 6, 6, 42, 42) + '</defs>' + symbolTile("url(#gs)", "#fff")) },
+    { key: "horizontal", name: "가로형 (기본)", desc: "모노라인 APEX + 회로 라인. 공식 기본형.", dark: false,
+      svg: svg("174 82", 174, 82, '<defs>' + gdef("gh", 8, 14, 166, 72) + '</defs>' + mono("url(#gh)", 0, 0, 1)) },
+    { key: "vertical", name: "세로형", desc: "APEX 로고 아래 상호를 넣은 버전.", dark: false,
+      svg: svg("180 116", 180, 116, '<defs>' + gdef("gv", 16, 15, 158, 68) + '</defs>' + mono("url(#gv)", 9, 2, 0.9) + sub(90, 105, "#67768d", "middle")) },
     { key: "mono-black", name: "단색 (블랙)", desc: "팩스·도장·단색 인쇄·계약서용.", dark: false,
-      svg: svg("236 60", 236, 60, emblem(INK, "#fff", 6, 6, 1) + apexWord(70, 39, 30, INK) + sub(71, 52, INK)) },
+      svg: svg("174 82", 174, 82, mono("#0e1726", 0, 0, 1)) },
     { key: "white", name: "화이트 (역상)", desc: "어두운 배경·사진 위에 사용.", dark: true,
-      svg: svg("236 60", 236, 60, emblem("#ffffff", "#0e1726", 6, 6, 1) + apexWord(70, 39, 30, "#ffffff") + sub(71, 52, "rgba(255,255,255,.72)")) }
+      svg: svg("174 82", 174, 82, mono("#ffffff", 0, 0, 1)) }
   ];
 
   // ---- 다운로드 ----

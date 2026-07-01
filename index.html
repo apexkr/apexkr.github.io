@@ -8,6 +8,7 @@
 <meta property="og:title" content="주식회사 에이펙스 | APEX Co., Ltd." />
 <meta property="og:description" content="From Hardware to Platform — 하드웨어에서 플랫폼까지. 임베디드 기술로 데이터의 가치를 잇습니다." />
 <meta property="og:type" content="website" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,21 +26,25 @@
   <div class="wrap nav">
     <a class="brand" href="#hero" aria-label="APEX 홈">
       <span class="brand-mark" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 48 48" width="34" height="34">
+        <svg class="logo-svg" viewBox="0 0 174 82" height="30" role="img" aria-label="APEX">
           <defs>
-            <linearGradient id="apexGrad" gradientUnits="userSpaceOnUse" x1="6" y1="6" x2="42" y2="42">
+            <linearGradient id="apexGrad" gradientUnits="userSpaceOnUse" x1="8" y1="14" x2="166" y2="72">
               <stop offset="0" stop-color="#1b56e0"/>
               <stop offset=".58" stop-color="#06b6a4"/>
               <stop offset="1" stop-color="#4dd9ff"/>
             </linearGradient>
           </defs>
-          <rect x="5" y="5" width="38" height="38" rx="11" fill="url(#apexGrad)"/>
-          <path class="apex-a" d="M15.5 33.5 24 14.5 32.5 33.5" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M19.1 26.6 H28.9" stroke="#fff" stroke-width="3.1" stroke-linecap="round"/>
-          <circle class="apex-node" cx="24" cy="14.5" r="2.8" fill="#fff"/>
+          <g fill="none" stroke="url(#apexGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 58 26 14 44 58"/><path d="M15.5 43 H36.5"/>
+            <path d="M56 14 V58"/><path d="M56 14 H72 C82 14 82 35 72 35 H56"/>
+            <path d="M92 14 V58"/><path d="M92 14 H120"/><path d="M92 35 H114"/><path d="M92 58 H120"/>
+            <path d="M132 14 166 58"/><path d="M166 14 132 58"/>
+          </g>
+          <path d="M8 74 H166" stroke="url(#apexGrad)" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
+          <g fill="url(#apexGrad)"><circle cx="26" cy="74" r="3"/><circle cx="64" cy="74" r="3"/><circle cx="106" cy="74" r="3"/><circle cx="149" cy="74" r="3"/></g>
         </svg>
       </span>
-      <span class="brand-text"><span class="brand-word">APEX</span><small>주식회사 에이펙스</small></span>
+      <span class="brand-text"><small>주식회사 에이펙스</small></span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">☰</button>
     <nav id="nav" aria-label="주요 메뉴">
