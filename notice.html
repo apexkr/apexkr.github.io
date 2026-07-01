@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>전자공고 | 주식회사 에이펙스</title>
+<meta name="description" content="주식회사 에이펙스 전자공고 — 상법 제289조 제3항 및 정관 제5조에 따른 회사 공고 게시판." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/animations.css" />
+</head>
+<body data-page="notice">
+<main>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow reveal" data-reveal>Public Notice</p>
+      <h2 class="title reveal" data-reveal data-reveal-delay="1">전자공고</h2>
+      <p class="lead reveal" data-reveal data-reveal-delay="2">
+        주식회사 에이펙스는 상법 제289조 제3항 및 정관 제5조에 따라 회사의 공고를 본 인터넷 홈페이지에 게재합니다.
+      </p>
+
+      <div class="board reveal" data-reveal data-reveal-delay="2">
+        <div class="board-tools">
+          <input type="search" id="q" placeholder="🔍 색인어(제목·내용) 검색" aria-label="색인어 검색" />
+          <div class="dates">
+            <label for="from">기간</label>
+            <input type="date" id="from" aria-label="시작일" />
+            <span class="muted">~</span>
+            <input type="date" id="to" aria-label="종료일" />
+          </div>
+          <select id="cat" aria-label="분류">
+            <option value="">전체 분류</option>
+            <option value="결산공고">결산공고</option>
+            <option value="주주총회">주주총회</option>
+            <option value="일반공고">일반공고</option>
+            <option value="기타">기타</option>
+          </select>
+        </div>
+        <table>
+          <thead>
+            <tr><th class="num">번호</th><th>제목</th><th>최초 공고일자</th><th>변경일자</th></tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div class="empty" id="empty" hidden>검색 조건에 해당하는 공고가 없습니다.</div>
+      </div>
+
+      <p class="note-legal reveal" data-reveal>
+        ※ 본 게시판은 상법 시행령 제6조에 따른 전자공고 시스템입니다. 각 공고는 최초 공고일자·내용·변경일자를 확인할 수 있으며,
+        제목·기간·색인어로 검색할 수 있습니다. 법령상 요구되는 기간(이의신청 기간 등이 있는 경우 그 기간, 그 밖의 공고는 게시일로부터 3개월 이상)
+        동안 계속 게시됩니다. 부득이한 사유로 본 홈페이지에 공고할 수 없는 때에는 정관에 정한 예비적 공고방법에 따릅니다.
+      </p>
+    </div>
+  </section>
+</main>
+<script src="js/layout.js"></script>
+<script src="js/notices.js"></script>
+<script src="js/site.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

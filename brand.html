@@ -39,34 +39,7 @@
   .usage li::before{content:"▸";position:absolute;left:0;color:var(--brand-2)}
 </style>
 </head>
-<body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="APEX 홈">
-      <span class="brand-mark" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 174 82" height="30" role="img" aria-label="APEX">
-          <defs>
-            <linearGradient id="brandHeadGrad" gradientUnits="userSpaceOnUse" x1="8" y1="14" x2="166" y2="72">
-              <stop offset="0" stop-color="#1b56e0"/>
-              <stop offset=".58" stop-color="#06b6a4"/>
-              <stop offset="1" stop-color="#4dd9ff"/>
-            </linearGradient>
-          </defs>
-          <g fill="none" stroke="url(#brandHeadGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 58 26 14 44 58"/><path d="M15.5 43 H36.5"/>
-            <path d="M56 14 V58"/><path d="M56 14 H72 C82 14 82 35 72 35 H56"/>
-            <path d="M92 14 V58"/><path d="M92 14 H120"/><path d="M92 35 H114"/><path d="M92 58 H120"/>
-            <path d="M132 14 166 58"/><path d="M166 14 132 58"/>
-          </g>
-          <path d="M8 74 H166" stroke="url(#brandHeadGrad)" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
-          <g fill="url(#brandHeadGrad)"><circle cx="26" cy="74" r="3"/><circle cx="64" cy="74" r="3"/><circle cx="106" cy="74" r="3"/><circle cx="149" cy="74" r="3"/></g>
-        </svg>
-      </span>
-      <span class="brand-text"><small>주식회사 에이펙스</small></span>
-    </a>
-    <nav aria-label="주요 메뉴"><ul><li><a href="index.html">홈으로</a></li></ul></nav>
-  </div>
-</header>
+<body data-page="brand">
 
 <section class="brand-hero">
   <div class="wrap">
@@ -92,13 +65,11 @@
   </div>
 </main>
 
-<footer>
-  <div class="wrap frow">
-    <div><strong>주식회사 에이펙스</strong> (APEX Co., Ltd.)<br>대전광역시 유성구 대정로28번안길 80 · 대표이사 전혜민</div>
-    <div class="fright">공고 홈페이지 <a href="index.html#notice" style="color:var(--brand)">apexkr.github.io</a><br>© 2026 APEX Co., Ltd. All rights reserved.</div>
-  </div>
-</footer>
-
+<script src="js/layout.js"></script>
+<script src="js/notices.js"></script>
+<script src="js/site.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/main.js"></script>
 <script>
 (function () {
   // ---- 로고 SVG 빌더 (모노라인 APEX) ----

@@ -13,6 +13,7 @@ window.APEX = window.APEX || {};
   const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
 
   APEX.initAdmin = function () {
+    if (!document.getElementById("adminOverlay")) return; // 관리자 오버레이 없는 페이지 방어
     const store = APEX.store;     // 공고
     const site = APEX.site;       // 사이트 콘텐츠
     const loginOv = $("loginOverlay"), adminOv = $("adminOverlay");

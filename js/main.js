@@ -2,14 +2,7 @@
    main.js — 초기화: 모바일 네비, 스크롤 등장 모션, 데이터 로드
    ========================================================= */
 (function () {
-  // ---- 모바일 메뉴 ----
-  const nav = document.getElementById("nav");
-  const mb = document.getElementById("menuBtn");
-  if (mb && nav) {
-    mb.addEventListener("click", () => nav.classList.toggle("open"));
-    nav.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => nav.classList.remove("open")));
-  }
+  // 헤더/목차/푸터/모바일 메뉴는 layout.js가 주입·처리합니다.
 
   // ---- 스크롤 등장 모션 (IntersectionObserver) ----
   function initReveal() {

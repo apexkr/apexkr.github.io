@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>주식회사 에이펙스 | APEX Co., Ltd.</title>
-<meta name="description" content="주식회사 에이펙스(APEX Co., Ltd.) — 임베디드 하드웨어 소싱에서 엣지 컴퓨팅, 통합 모니터링 플랫폼까지. 하드웨어에서 플랫폼으로 진화하는 임베디드 기술 기업." />
+<meta name="description" content="주식회사 에이펙스(APEX Co., Ltd.) — 임베디드 하드웨어 소싱에서 엣지 컴퓨팅, 통합 모니터링 플랫폼까지. 디바이스를 잇고 데이터를 깨우는 임베디드 기술 기업." />
 <meta property="og:title" content="주식회사 에이펙스 | APEX Co., Ltd." />
-<meta property="og:description" content="From Hardware to Platform — 하드웨어에서 플랫폼까지. 임베디드 기술로 데이터의 가치를 잇습니다." />
+<meta property="og:description" content="디바이스를 잇고, 데이터를 깨우는 임베디드 기술." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -19,47 +19,7 @@
 <link rel="stylesheet" href="css/components.css" />
 <link rel="stylesheet" href="css/animations.css" />
 </head>
-<body>
-
-<!-- ===================== Header ===================== -->
-<header id="top">
-  <div class="wrap nav">
-    <a class="brand" href="#hero" aria-label="APEX 홈">
-      <span class="brand-mark" aria-hidden="true">
-        <svg class="logo-svg" viewBox="0 0 174 82" height="30" role="img" aria-label="APEX">
-          <defs>
-            <linearGradient id="apexGrad" gradientUnits="userSpaceOnUse" x1="8" y1="14" x2="166" y2="72">
-              <stop offset="0" stop-color="#1b56e0"/>
-              <stop offset=".58" stop-color="#06b6a4"/>
-              <stop offset="1" stop-color="#4dd9ff"/>
-            </linearGradient>
-          </defs>
-          <g fill="none" stroke="url(#apexGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 58 26 14 44 58"/><path d="M15.5 43 H36.5"/>
-            <path d="M56 14 V58"/><path d="M56 14 H72 C82 14 82 35 72 35 H56"/>
-            <path d="M92 14 V58"/><path d="M92 14 H120"/><path d="M92 35 H114"/><path d="M92 58 H120"/>
-            <path d="M132 14 166 58"/><path d="M166 14 132 58"/>
-          </g>
-          <path d="M8 74 H166" stroke="url(#apexGrad)" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
-          <g fill="url(#apexGrad)"><circle cx="26" cy="74" r="3"/><circle cx="64" cy="74" r="3"/><circle cx="106" cy="74" r="3"/><circle cx="149" cy="74" r="3"/></g>
-        </svg>
-      </span>
-      <span class="brand-text"><small>주식회사 에이펙스</small></span>
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">☰</button>
-    <nav id="nav" aria-label="주요 메뉴">
-      <ul>
-        <li><a href="#about">회사소개</a></li>
-        <li><a href="#vision">비전 로드맵</a></li>
-        <li><a href="#biz">사업영역</a></li>
-        <li><a href="#company">회사정보</a></li>
-        <li><a href="brand.html">브랜드·로고</a></li>
-        <li><a class="cta" href="#notice">전자공고</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+<body data-page="home">
 <main>
   <!-- ===================== Hero ===================== -->
   <section class="hero" id="hero">
@@ -75,8 +35,8 @@
           현장의 데이터를 플랫폼 가치로 확장합니다.
         </p>
         <div class="hero-btns reveal" data-reveal data-reveal-delay="3">
-          <a class="btn primary" href="#vision">비전 로드맵 보기</a>
-          <a class="btn ghost" href="#biz">사업영역</a>
+          <a class="btn primary" href="vision.html">비전 로드맵 보기</a>
+          <a class="btn ghost" href="biz.html">사업영역</a>
         </div>
         <ul class="hero-stats reveal" data-reveal data-reveal-delay="4">
           <li><span class="stat-key">Device Linkage</span><b>센서 · MCU · 엣지</b></li>
@@ -138,314 +98,35 @@
     </div>
   </section>
 
-  <!-- ===================== About ===================== -->
-  <section id="about" class="section">
+  <!-- ===================== Explore (섹션 바로가기) ===================== -->
+  <section class="section">
     <div class="wrap">
-      <p class="eyebrow reveal" data-reveal>About</p>
-      <h2 class="title reveal" id="aboutTitle" data-reveal data-reveal-delay="1">새로운 출발점에서, 하드웨어와 데이터를 잇는 회사</h2>
-      <p class="lead reveal" id="aboutLead" data-reveal data-reveal-delay="2">
-        에이펙스(APEX Co., Ltd.)는 임베디드 하드웨어 소싱을 기반으로 시작해, 자체 펌웨어·제어 기술과
-        엣지 컴퓨팅 역량을 더해 <b>디바이스, 제어 로직, 데이터를 하나의 흐름으로 잇는 턴키(Turn-key) 솔루션</b>을 제공하는
-        임베디드 기술 기업입니다. 글로벌 시장에서 검증된 핵심 부품의 안정적 공급망과
-        현장 신뢰성을 갖춘 소프트웨어를 결합해, 고객사의 개발 기간을 단축하고 기술적 난제를 해결합니다.
-      </p>
-      <div class="pillars">
-        <div class="pillar reveal" data-reveal data-reveal-delay="1">
-          <span class="pillar-ic pillar-ic-precision" aria-hidden="true"></span>
-          <h3>기술 신뢰성</h3>
-          <p>산업 표준 통신과 고정밀 센서 제어에 최적화된 검증된 하드웨어·펌웨어.</p>
-        </div>
-        <div class="pillar reveal" data-reveal data-reveal-delay="2">
-          <span class="pillar-ic pillar-ic-link" aria-hidden="true"></span>
-          <h3>수직 통합</h3>
-          <p>부품 소싱 → 임베디드 S/W → 엣지·플랫폼까지 한 흐름으로 연결.</p>
-        </div>
-        <div class="pillar reveal" data-reveal data-reveal-delay="3">
-          <span class="pillar-ic pillar-ic-scale" aria-hidden="true"></span>
-          <h3>확장 가능성</h3>
-          <p>유통에서 출발해 구독형 모니터링 플랫폼(SaaS)으로 진화하는 사업 모델.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== Vision Roadmap ===================== -->
-  <section id="vision" class="section section-alt">
-    <div class="wrap">
-      <p class="eyebrow reveal" data-reveal>Vision Roadmap</p>
-      <h2 class="title reveal" data-reveal data-reveal-delay="1">하드웨어에서 플랫폼으로, 3단계 성장 전략</h2>
-      <p class="lead reveal" data-reveal data-reveal-delay="2">
-        단순 하드웨어 유통에서 통합 플랫폼 기업으로 진화하는 에이펙스의 중장기 비전입니다.
-      </p>
-
-      <ol class="timeline">
-        <li class="phase reveal" data-reveal>
-          <div class="phase-rail" aria-hidden="true"><span class="dot"></span></div>
-          <div class="phase-card">
-            <span class="phase-tag">Phase 1</span>
-            <h3>하드웨어 인프라 &amp; 소싱</h3>
-            <p class="phase-goal">핵심 목표 — 양질의 임베디드 장비 공급을 통한 초기 시장 진입과 B2B 네트워크 확보</p>
-            <ul>
-              <li>글로벌 시장에서 검증된 핵심 마이크로컨트롤러(STM32 등)·통신/센서 모듈의 안정적 공급망 구축</li>
-              <li>연구 기관·개발자 타깃의 맞춤형 하드웨어 키트(Kit) 제공으로 제품 개발 주기 효율화</li>
-              <li>신속·정확한 부품 수급 프로세스로 고객사 하드웨어 개발 기간(TAT) 단축에 기여</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="phase reveal" data-reveal>
-          <div class="phase-rail" aria-hidden="true"><span class="dot"></span></div>
-          <div class="phase-card">
-            <span class="phase-tag">Phase 2</span>
-            <h3>임베디드 S/W &amp; 엣지 컴퓨팅</h3>
-            <p class="phase-goal">핵심 목표 — 하드웨어 공급망을 넘어, 지능형 제어 소프트웨어가 융합된 기술 솔루션 기업으로 도약</p>
-            <ul>
-              <li>산업 표준 통신(CAN 등)·고정밀 센서 제어에 최적화된 신뢰도 높은 펌웨어(Firmware) 자체 개발</li>
-              <li>현장 데이터를 실시간 1차 처리·최적화하는 엣지(Edge) 컴퓨팅 기술 고도화</li>
-              <li>보드(H/W)와 제어 로직(S/W)이 결합된 턴키(Turn-key) 솔루션으로 고객사 난제 해결</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="phase reveal" data-reveal>
-          <div class="phase-rail" aria-hidden="true"><span class="dot"></span></div>
-          <div class="phase-card highlight">
-            <span class="phase-tag">Phase 3</span>
-            <h3>통합 모니터링 시스템 &amp; 플랫폼</h3>
-            <p class="phase-goal">핵심 목표 — 엣지 디바이스와 서버를 아우르는 실시간 원격 모니터링 서비스 상용화</p>
-            <ul>
-              <li>산업 현장·특수 환경의 센서 데이터를 실시간 수집·분석·시각화하는 직관적 모니터링 대시보드 구축</li>
-              <li>누적 제어 데이터 기반의 이상 감지·예측 유지보수(Predictive Maintenance) 알고리즘 도입</li>
-              <li>맞춤형 데이터 로깅·원격 제어를 통합한 구독형 플랫폼(SaaS) 비즈니스로 생태계 확장</li>
-            </ul>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ===================== Business ===================== -->
-  <section id="biz" class="section">
-    <div class="wrap">
-      <p class="eyebrow reveal" data-reveal>Business</p>
-      <h2 class="title reveal" data-reveal data-reveal-delay="1">사업영역</h2>
-      <p class="lead reveal" data-reveal data-reveal-delay="2">로드맵을 실현하는 세 가지 핵심 사업 축입니다.</p>
+      <p class="eyebrow reveal" data-reveal>Explore</p>
+      <h2 class="title reveal" data-reveal data-reveal-delay="1">에이펙스 살펴보기</h2>
+      <p class="lead reveal" data-reveal data-reveal-delay="2">필요한 정보를 바로 확인하세요.</p>
       <div class="cards">
-        <article class="card reveal" data-reveal data-reveal-delay="1">
-          <span class="card-ic card-ic-hardware" aria-hidden="true"></span>
-          <h3>하드웨어 인프라 · 소싱</h3>
-          <p>임베디드 보드, MCU, 통신·센서 모듈의 검증된 공급망과 맞춤형 개발 키트 제공.</p>
-        </article>
-        <article class="card reveal" data-reveal data-reveal-delay="2">
-          <span class="card-ic card-ic-edge" aria-hidden="true"></span>
-          <h3>임베디드 S/W · 엣지</h3>
-          <p>산업 표준 통신·센서 제어 펌웨어 자체 개발과 현장 엣지 컴퓨팅 솔루션.</p>
-        </article>
-        <article class="card reveal" data-reveal data-reveal-delay="3">
-          <span class="card-ic card-ic-platform" aria-hidden="true"></span>
-          <h3>통합 모니터링 플랫폼</h3>
-          <p>실시간 데이터 수집·시각화, 이상 감지·예측 유지보수, 구독형 SaaS 확장.</p>
-        </article>
+        <a class="card reveal" href="about.html" data-reveal data-reveal-delay="1">
+          <span class="card-ic" aria-hidden="true">🏢</span><h3>회사소개</h3>
+          <p>하드웨어와 데이터를 잇는 회사, 핵심 역량 소개.</p>
+        </a>
+        <a class="card reveal" href="vision.html" data-reveal data-reveal-delay="2">
+          <span class="card-ic" aria-hidden="true">📈</span><h3>비전 로드맵</h3>
+          <p>하드웨어 → 엣지 → 플랫폼, 3단계 성장 전략.</p>
+        </a>
+        <a class="card reveal" href="biz.html" data-reveal data-reveal-delay="3">
+          <span class="card-ic" aria-hidden="true">⚙️</span><h3>사업영역</h3>
+          <p>소싱·임베디드 S/W·통합 모니터링 세 축.</p>
+        </a>
+        <a class="card reveal" href="notice.html" data-reveal data-reveal-delay="4">
+          <span class="card-ic" aria-hidden="true">📢</span><h3>전자공고</h3>
+          <p>상법에 따른 회사 공고 게시판.</p>
+        </a>
       </div>
-    </div>
-  </section>
-
-  <!-- ===================== Corporate ===================== -->
-  <section id="company" class="section section-alt">
-    <div class="wrap">
-      <p class="eyebrow reveal" data-reveal>Corporate</p>
-      <h2 class="title reveal" data-reveal data-reveal-delay="1">회사정보</h2>
-      <div class="info reveal" data-reveal data-reveal-delay="2">
-        <dl id="companyDl">
-          <div><dt>상호</dt><dd>주식회사 에이펙스 <span class="muted">(APEX Co., Ltd.)</span></dd></div>
-          <div><dt>대표이사</dt><dd>전혜민</dd></div>
-          <div><dt>본점 소재지</dt><dd>대전광역시 유성구 대정로28번안길 80</dd></div>
-          <div><dt>설립일</dt><dd>2026년 6월 30일</dd></div>
-          <div><dt>사업 분야</dt><dd>임베디드 하드웨어·소프트웨어, 엣지 컴퓨팅, 모니터링 플랫폼</dd></div>
-          <div><dt>공고방법</dt><dd>전자적 방법(회사 인터넷 홈페이지 https://apexkr.github.io 게재)</dd></div>
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 전자공고 (Public Notice) ===================== -->
-  <section id="notice" class="section">
-    <div class="wrap">
-      <p class="eyebrow reveal" data-reveal>Public Notice</p>
-      <h2 class="title reveal" data-reveal data-reveal-delay="1">전자공고</h2>
-      <p class="lead reveal" data-reveal data-reveal-delay="2">
-        주식회사 에이펙스는 상법 제289조 제3항 및 정관 제5조에 따라 회사의 공고를 본 인터넷 홈페이지에 게재합니다.
-      </p>
-
-      <div class="board reveal" data-reveal data-reveal-delay="2">
-        <div class="board-tools">
-          <input type="search" id="q" placeholder="🔍 색인어(제목·내용) 검색" aria-label="색인어 검색" />
-          <div class="dates">
-            <label for="from">기간</label>
-            <input type="date" id="from" aria-label="시작일" />
-            <span class="muted">~</span>
-            <input type="date" id="to" aria-label="종료일" />
-          </div>
-          <select id="cat" aria-label="분류">
-            <option value="">전체 분류</option>
-            <option value="결산공고">결산공고</option>
-            <option value="주주총회">주주총회</option>
-            <option value="일반공고">일반공고</option>
-            <option value="기타">기타</option>
-          </select>
-        </div>
-        <table>
-          <thead>
-            <tr><th class="num">번호</th><th>제목</th><th>최초 공고일자</th><th>변경일자</th></tr>
-          </thead>
-          <tbody id="rows"></tbody>
-        </table>
-        <div class="empty" id="empty" hidden>검색 조건에 해당하는 공고가 없습니다.</div>
-      </div>
-
-      <p class="note-legal reveal" data-reveal>
-        ※ 본 게시판은 상법 시행령 제6조에 따른 전자공고 시스템입니다. 각 공고는 최초 공고일자·내용·변경일자를 확인할 수 있으며,
-        제목·기간·색인어로 검색할 수 있습니다. 법령상 요구되는 기간(이의신청 기간 등이 있는 경우 그 기간, 그 밖의 공고는 게시일로부터 3개월 이상)
-        동안 계속 게시됩니다. 부득이한 사유로 본 홈페이지에 공고할 수 없는 때에는 정관에 정한 예비적 공고방법에 따릅니다.
-      </p>
     </div>
   </section>
 </main>
 
-<!-- ===================== Footer ===================== -->
-<footer>
-  <div class="wrap frow">
-    <div>
-      <strong>주식회사 에이펙스</strong> (APEX Co., Ltd.)<br>
-      대전광역시 유성구 대정로28번안길 80 · 대표이사 전혜민
-    </div>
-    <div class="fright">
-      공고 홈페이지 https://apexkr.github.io<br>
-      © 2026 APEX Co., Ltd. All rights reserved.<br>
-      <a href="brand.html" style="color:var(--brand)">브랜드 · 로고</a> ·
-      <button class="admin-link" id="adminLink">관리자</button>
-    </div>
-  </div>
-</footer>
-
-<!-- 관리자 로그인 -->
-<div class="overlay" id="loginOverlay">
-  <div class="modal modal-sm">
-    <div class="modal-head"><h3>관리자 로그인</h3><button class="x" data-close aria-label="닫기">×</button></div>
-    <div class="modal-body">
-      <div class="field"><label for="adId">아이디</label><input id="adId" autocomplete="username" /></div>
-      <div class="field"><label for="adPw">비밀번호</label><input id="adPw" type="password" autocomplete="current-password" /></div>
-      <p id="loginErr" class="err" hidden>아이디 또는 비밀번호가 올바르지 않습니다.</p>
-      <button class="btn-sm primary block" id="loginBtn">로그인</button>
-    </div>
-  </div>
-</div>
-
-<!-- 관리자 대시보드 -->
-<div class="overlay" id="adminOverlay">
-  <div class="dash">
-    <div class="dash-head">
-      <div class="dash-title">
-        <span class="brand-mark" aria-hidden="true"><svg class="logo-svg" viewBox="0 0 48 48" width="22" height="22"> <defs> <linearGradient id="dashGrad" gradientUnits="userSpaceOnUse" x1="7" y1="7" x2="41" y2="41"> <stop offset="0" stop-color="#1b56e0"/> <stop offset=".62" stop-color="#06b6a4"/> <stop offset="1" stop-color="#4dd9ff"/> </linearGradient> </defs> <path class="apex-mark" d="M24 4.8 41.5 15.2v17.6L24 43.2 6.5 32.8V15.2Z" fill="url(#dashGrad)"/> <path class="apex-link" d="M15.7 27.6 24 17.2l8.3 10.4" fill="none" stroke="#fff" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round" opacity=".94"/> <rect x="12.3" y="24.2" width="6.8" height="6.8" rx="1.7" fill="#fff"/> <rect x="20.6" y="13.8" width="6.8" height="6.8" rx="1.7" fill="#fff"/> <rect x="28.9" y="24.2" width="6.8" height="6.8" rx="1.7" fill="#fff"/> </svg></span>
-        APEX 관리자 대시보드
-      </div>
-      <div class="dash-head-actions">
-        <button class="btn-sm" id="logoutBtn">로그아웃</button>
-        <button class="x" data-close aria-label="닫기">×</button>
-      </div>
-    </div>
-    <div class="dash-body">
-      <nav class="dash-side" aria-label="관리 메뉴">
-        <button class="dash-nav active" data-tab="overview">개요</button>
-        <button class="dash-nav" data-tab="notices">전자공고</button>
-        <button class="dash-nav" data-tab="site">회사정보·소개</button>
-        <button class="dash-nav" data-tab="publish">게시(배포)</button>
-      </nav>
-      <div class="dash-main">
-        <p class="admin-banner">편집 내용은 <b>이 브라우저에만 임시 저장(미리보기)</b>됩니다. 실제 게시는
-          <b>[게시(배포)]</b> 탭에서 JSON을 생성해 <code>data/*.json</code> 교체 후 배포(commit·push)해야 반영됩니다.</p>
-
-        <!-- 개요 -->
-        <section class="dash-panel" data-panel="overview">
-          <h3 class="dash-h">개요</h3>
-          <div class="stat-grid">
-            <div class="stat"><b id="statCount">0</b><span>등록 공고</span></div>
-            <div class="stat"><b id="statLatest">—</b><span>최근 공고일</span></div>
-            <div class="stat"><b id="statDraft">없음</b><span>미게시 임시변경</span></div>
-          </div>
-          <p class="dash-note">왼쪽 메뉴에서 <b>전자공고</b>와 <b>회사정보·소개</b>를 관리하세요.
-            편집을 마치면 <b>게시(배포)</b> 탭에서 파일을 내보내 배포합니다.</p>
-        </section>
-
-        <!-- 전자공고 -->
-        <section class="dash-panel" data-panel="notices" hidden>
-          <h3 class="dash-h">전자공고 관리</h3>
-          <div class="admin-list" id="adminList"></div>
-          <button class="btn-sm primary" id="newBtn">+ 새 공고 작성</button>
-          <div id="editArea" hidden>
-            <input type="hidden" id="fId" />
-            <div class="field"><label for="fTitle">제목</label><input id="fTitle" /></div>
-            <div class="field row2">
-              <div><label for="fCat">분류</label>
-                <select id="fCat"><option>일반공고</option><option>결산공고</option><option>주주총회</option><option>기타</option></select></div>
-              <div><label for="fDate">최초 공고일자</label><input id="fDate" type="date" /></div>
-              <div><label for="fUpdated">변경일자</label><input id="fUpdated" type="date" /></div>
-            </div>
-            <div class="field"><label for="fBody">본문</label><textarea id="fBody"></textarea></div>
-            <div class="admin-actions">
-              <button class="btn-sm primary" id="saveBtn">저장</button>
-              <button class="btn-sm" id="cancelBtn">취소</button>
-            </div>
-          </div>
-        </section>
-
-        <!-- 회사정보·소개 -->
-        <section class="dash-panel" data-panel="site" hidden>
-          <h3 class="dash-h">회사정보 · 소개</h3>
-          <h4 class="dash-sub">회사정보</h4>
-          <div class="field row2">
-            <div><label for="sName">상호(국문)</label><input id="sName" /></div>
-            <div><label for="sNameEn">상호(영문)</label><input id="sNameEn" /></div>
-          </div>
-          <div class="field row2">
-            <div><label for="sCeo">대표이사</label><input id="sCeo" /></div>
-            <div><label for="sEst">설립일</label><input id="sEst" /></div>
-          </div>
-          <div class="field"><label for="sAddr">본점 소재지</label><input id="sAddr" /></div>
-          <div class="field"><label for="sField">사업 분야</label><input id="sField" /></div>
-          <div class="field"><label for="sNotice">공고방법</label><input id="sNotice" /></div>
-          <h4 class="dash-sub">히어로 / 회사소개 문구</h4>
-          <div class="field"><label for="sHeroKicker">상단 키워드</label><input id="sHeroKicker" /></div>
-          <div class="field"><label for="sHeroTitle">히어로 제목 (HTML 가능: &lt;br&gt;, &lt;span class="grad"&gt;)</label><textarea id="sHeroTitle" style="min-height:70px"></textarea></div>
-          <div class="field"><label for="sHeroLead">히어로 설명</label><textarea id="sHeroLead" style="min-height:70px"></textarea></div>
-          <div class="field"><label for="sAboutTitle">회사소개 제목</label><input id="sAboutTitle" /></div>
-          <div class="field"><label for="sAboutLead">회사소개 본문 (HTML 가능: &lt;b&gt;)</label><textarea id="sAboutLead"></textarea></div>
-          <div class="admin-actions">
-            <button class="btn-sm primary" id="siteSaveBtn">회사정보·소개 저장(미리보기)</button>
-          </div>
-        </section>
-
-        <!-- 게시 -->
-        <section class="dash-panel" data-panel="publish" hidden>
-          <h3 class="dash-h">게시 (배포)</h3>
-          <p class="dash-note">① 아래 버튼으로 파일 내용을 생성 → ② 출력 내용을 복사해 해당 파일을 교체 →
-            ③ <code>git add -A &amp;&amp; git commit -m "..." &amp;&amp; git push</code> 하면 실제 게시됩니다. (Claude에게 맡겨도 됩니다.)</p>
-          <div class="admin-actions">
-            <button class="btn-sm primary" id="exportNoticesBtn">data/notices.json 생성</button>
-            <button class="btn-sm primary" id="exportSiteBtn">data/site.json 생성</button>
-            <button class="btn-sm" id="copyBtn" hidden>복사</button>
-          </div>
-          <p id="exportLabel" class="dash-note" hidden></p>
-          <textarea id="exportBox" readonly hidden></textarea>
-          <div class="admin-actions" style="margin-top:16px">
-            <button class="btn-sm danger" id="resetBtn">모든 임시본 초기화</button>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</div>
-
+<script src="js/layout.js"></script>
 <script src="js/notices.js"></script>
 <script src="js/site.js"></script>
 <script src="js/admin.js"></script>
