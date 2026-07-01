@@ -146,6 +146,13 @@ tbody tr:last-child td{border-bottom:none}
 nav a.active{color:var(--brand);font-weight:800}
 nav a.active.cta{color:var(--brand)}
 
+/* 페이지 상단 히어로 밴드 (모든 서브 페이지 공통 — 브랜드 페이지와 통일) */
+.page-hero{padding:76px 0 46px;border-bottom:1px solid var(--line);
+  background:linear-gradient(118deg,#f7fbff 0%,#ffffff 54%,#effbf8 100%)}
+.page-hero .eyebrow{margin:0 0 12px}
+.page-hero h1.title{font-size:clamp(28px,4.2vw,46px);margin:0 0 14px;max-width:20ch}
+.page-hero .lead{margin:0;max-width:64ch}
+
 /* Admin Dashboard */
 .dash{background:var(--panel);border:1px solid var(--line);border-radius:12px;width:100%;
   max-width:1040px;box-shadow:var(--shadow-lg);overflow:hidden;display:flex;flex-direction:column;
