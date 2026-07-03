@@ -47,6 +47,7 @@
     '<div class="fright">공고 홈페이지 https://apexkr.github.io<br>' +
     "© 2026 APEX Co., Ltd. All rights reserved.<br>" +
     '<a href="brand.html" style="color:var(--brand)">브랜드 · 로고</a> · ' +
+    '<a href="seal.html" style="color:var(--brand)">인감 시안</a> · ' +
     '<button class="admin-link" id="adminLink">관리자</button></div>' +
     "</div></footer>";
 
