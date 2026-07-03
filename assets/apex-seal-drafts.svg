@@ -1,0 +1,121 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080">
+  <defs>
+    <style>
+      :root{--ink:#b31222;--soft:#f8e7e9;--paper:#fffdf9;--muted:#6d2730;}
+      .bg{fill:var(--paper)}
+      .title{font-family:"Pretendard","Malgun Gothic",sans-serif;font-size:38px;font-weight:800;fill:#241315;letter-spacing:0}
+      .sub{font-family:"Pretendard","Malgun Gothic",sans-serif;font-size:18px;font-weight:500;fill:#6f5559;letter-spacing:0}
+      .label{font-family:"Pretendard","Malgun Gothic",sans-serif;font-size:24px;font-weight:800;fill:#2a1518;letter-spacing:0;text-anchor:middle}
+      .caption{font-family:"Pretendard","Malgun Gothic",sans-serif;font-size:15px;font-weight:600;fill:#7a5157;letter-spacing:0;text-anchor:middle}
+      .seal{stroke:var(--ink);fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .seal-fill{fill:var(--ink)}
+      .seal-text{font-family:"Noto Serif KR","Nanum Myeongjo","Batang","Malgun Gothic",serif;fill:var(--ink);font-weight:800;letter-spacing:0}
+      .seal-sans{font-family:"Pretendard","Malgun Gothic",sans-serif;fill:var(--ink);font-weight:900;letter-spacing:0}
+      .seal-note{font-family:"Noto Serif KR","Nanum Myeongjo","Batang","Malgun Gothic",serif;fill:var(--ink);font-weight:900;letter-spacing:0}
+      .thin{stroke-width:3}.mid{stroke-width:6}.bold{stroke-width:11}.hair{stroke-width:2}
+      .draft-card{fill:#fff;stroke:#efd6da;stroke-width:1.4;rx:24}
+      .guide{stroke:#f1d8dc;stroke-width:1;stroke-dasharray:5 9}
+    </style>
+    <path id="circleText1" d="M -118 0 A 118 118 0 1 1 118 0 A 118 118 0 1 1 -118 0" />
+    <path id="circleText2" d="M -116 0 A 116 116 0 1 1 116 0 A 116 116 0 1 1 -116 0" />
+    <path id="circleText3" d="M -119 0 A 119 119 0 1 1 119 0 A 119 119 0 1 1 -119 0" />
+  </defs>
+
+  <rect class="bg" width="1600" height="1080"/>
+  <text class="title" x="80" y="76">APEX 인감도장 디자인 시안</text>
+  <text class="sub" x="80" y="112">회사명 기준: 주식회사 에이펙스 · 원형 3안 / 사각 3안 · 실제 제작 전 문구와 법적 용도는 확인 필요</text>
+
+  <!-- Cards -->
+  <g transform="translate(80 155)">
+    <rect class="draft-card" width="440" height="390" rx="24"/>
+    <g transform="translate(220 174)">
+      <circle class="seal bold" r="132"/>
+      <circle class="seal thin" r="111"/>
+      <circle class="seal hair" r="72" opacity=".55"/>
+      <text class="seal-text" font-size="25"><textPath href="#circleText1" startOffset="23%">주식회사 에이펙스</textPath></text>
+      <text class="seal-text" font-size="25"><textPath href="#circleText1" startOffset="70%">APEX CO., LTD.</textPath></text>
+      <text class="seal-note" text-anchor="middle" font-size="52" x="0" y="4">法人</text>
+      <text class="seal-text" text-anchor="middle" font-size="26" x="0" y="48">印</text>
+    </g>
+    <text class="label" x="220" y="335">원형 01</text>
+    <text class="caption" x="220" y="362">정통 법인 인감형 · 안정감</text>
+  </g>
+
+  <g transform="translate(580 155)">
+    <rect class="draft-card" width="440" height="390" rx="24"/>
+    <g transform="translate(220 174)">
+      <circle class="seal mid" r="129"/>
+      <path class="seal bold" d="M-94 -72 A119 119 0 0 1 96 -70"/>
+      <path class="seal bold" d="M96 70 A119 119 0 0 1 -96 70"/>
+      <path class="seal mid" d="M-76 30 0 -52 76 30"/>
+      <rect class="seal-fill" x="-92" y="18" width="34" height="34" rx="7" transform="rotate(45 -75 35)"/>
+      <rect class="seal-fill" x="-17" y="-69" width="34" height="34" rx="7" transform="rotate(45 0 -52)"/>
+      <rect class="seal-fill" x="58" y="18" width="34" height="34" rx="7" transform="rotate(45 75 35)"/>
+      <text class="seal-sans" text-anchor="middle" font-size="31" x="0" y="74">APEX</text>
+      <text class="seal-text" text-anchor="middle" font-size="23" x="0" y="103">주식회사 에이펙스</text>
+    </g>
+    <text class="label" x="220" y="335">원형 02</text>
+    <text class="caption" x="220" y="362">디바이스 링크형 · 젊고 기술적</text>
+  </g>
+
+  <g transform="translate(1080 155)">
+    <rect class="draft-card" width="440" height="390" rx="24"/>
+    <g transform="translate(220 174)">
+      <circle class="seal bold" r="132"/>
+      <circle class="seal hair" r="102"/>
+      <path class="seal mid" d="M-60 -4 Q0 -74 60 -4 Q0 62 -60 -4Z"/>
+      <path class="seal hair" d="M-83 -83 83 83M83 -83 -83 83" opacity=".5"/>
+      <text class="seal-text" font-size="24"><textPath href="#circleText3" startOffset="18%">주식회사 에이펙스</textPath></text>
+      <text class="seal-note" text-anchor="middle" font-size="42" x="0" y="10">印</text>
+      <text class="seal-text" text-anchor="middle" font-size="22" x="0" y="52">APEX</text>
+    </g>
+    <text class="label" x="220" y="335">원형 03</text>
+    <text class="caption" x="220" y="362">전통+브랜드 혼합형 · 선명한 인상</text>
+  </g>
+
+  <g transform="translate(80 600)">
+    <rect class="draft-card" width="440" height="390" rx="24"/>
+    <g transform="translate(220 166)">
+      <rect class="seal bold" x="-126" y="-126" width="252" height="252" rx="8"/>
+      <rect class="seal hair" x="-101" y="-101" width="202" height="202" rx="4"/>
+      <line class="seal hair" x1="-101" y1="0" x2="101" y2="0" opacity=".45"/>
+      <line class="seal hair" x1="0" y1="-101" x2="0" y2="101" opacity=".45"/>
+      <text class="seal-text" text-anchor="middle" font-size="30" x="0" y="-50">株式會社</text>
+      <text class="seal-text" text-anchor="middle" font-size="38" x="0" y="12">에이펙스</text>
+      <text class="seal-note" text-anchor="middle" font-size="42" x="0" y="73">印</text>
+    </g>
+    <text class="label" x="220" y="335">사각 01</text>
+    <text class="caption" x="220" y="362">깔끔한 정방형 · 공식 문서용</text>
+  </g>
+
+  <g transform="translate(580 600)">
+    <rect class="draft-card" width="440" height="390" rx="24"/>
+    <g transform="translate(220 166)">
+      <rect class="seal bold" x="-126" y="-126" width="252" height="252" rx="0"/>
+      <path class="seal mid" d="M-94 -72 H94M-94 0H94M-94 72H94M-72 -94V94M0 -94V94M72 -94V94" opacity=".62"/>
+      <text class="seal-note" text-anchor="middle" font-size="42" x="-48" y="-35">株</text>
+      <text class="seal-note" text-anchor="middle" font-size="42" x="48" y="-35">式</text>
+      <text class="seal-note" text-anchor="middle" font-size="40" x="-48" y="40">會</text>
+      <text class="seal-note" text-anchor="middle" font-size="40" x="48" y="40">社</text>
+      <text class="seal-sans" text-anchor="middle" font-size="30" x="0" y="94">APEX</text>
+    </g>
+    <text class="label" x="220" y="335">사각 02</text>
+    <text class="caption" x="220" y="362">전각 격자형 · 전통적 무게감</text>
+  </g>
+
+  <g transform="translate(1080 600)">
+    <rect class="draft-card" width="440" height="390" rx="24"/>
+    <g transform="translate(220 166)">
+      <path class="seal bold" d="M-125 -100 -100 -125H100L125 -100V100L100 125H-100L-125 100Z"/>
+      <path class="seal hair" d="M-93 -78 -78 -93H78L93 -78V78L78 93H-78L-93 78Z"/>
+      <path class="seal mid" d="M-58 28 0 -48 58 28"/>
+      <rect class="seal-fill" x="-72" y="15" width="28" height="28" rx="5"/>
+      <rect class="seal-fill" x="-14" y="-62" width="28" height="28" rx="5"/>
+      <rect class="seal-fill" x="44" y="15" width="28" height="28" rx="5"/>
+      <text class="seal-sans" text-anchor="middle" font-size="34" x="0" y="78">APEX</text>
+      <text class="seal-text" text-anchor="middle" font-size="20" x="0" y="104">주식회사 에이펙스</text>
+    </g>
+    <text class="label" x="220" y="335">사각 03</text>
+    <text class="caption" x="220" y="362">테크 엠블럼형 · 브랜드 활용성</text>
+  </g>
+</svg>

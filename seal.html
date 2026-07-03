@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>법인 인감 시안 | 주식회사 에이펙스</title>
-<meta name="description" content="주식회사 에이펙스 법인 인감(도장) 디자인 시안 — 원형·정사각·모던 5종 (SVG·PNG)." />
+<meta name="description" content="주식회사 에이펙스 법인 인감(도장) 디자인 시안 — 전각 스타일 동그라미 3 · 네모 3 (SVG·PNG)." />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,13 +15,14 @@
 <link rel="stylesheet" href="css/layout.css" />
 <link rel="stylesheet" href="css/components.css" />
 <style>
-  .seal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;padding:40px 0}
+  .seal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:36px 0}
   .seal-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel);box-shadow:var(--shadow);display:flex;flex-direction:column}
-  .seal-show{display:grid;place-items:center;min-height:230px;padding:26px;background:var(--bg-alt)}
-  .seal-show svg{width:196px;height:196px}
-  .seal-meta{padding:16px 20px;border-top:1px solid var(--line);margin-top:auto}
-  .seal-meta h3{font-size:16px;margin:0 0 4px}
-  .seal-meta p{font-size:12.5px;color:var(--muted);margin:0 0 12px;line-height:1.6}
+  .seal-show{display:grid;place-items:center;min-height:220px;padding:24px;background:var(--bg-alt)}
+  .seal-show svg{width:184px;height:184px}
+  .seal-meta{padding:15px 18px;border-top:1px solid var(--line);margin-top:auto}
+  .seal-meta h3{font-size:15px;margin:0 0 4px}
+  .seal-meta .kind{font-size:11px;font-weight:800;color:var(--brand-2);font-family:ui-monospace,Consolas,monospace}
+  .seal-meta p{font-size:12px;color:var(--muted);margin:4px 0 12px;line-height:1.6}
   .seal-dl{display:flex;gap:8px}
   .warn{background:#fff4f4;border:1px solid #f2c4c4;color:#9a2b2b;border-radius:var(--radius);padding:18px 22px;margin:8px 0 4px;font-size:14px;line-height:1.75}
   .warn b{color:#7a1f1f}
@@ -33,15 +34,16 @@
     <div class="wrap">
       <p class="eyebrow">Corporate Seal</p>
       <h1 class="title">법인 인감 시안</h1>
-      <p class="lead">주식회사 에이펙스 법인 인감(도장) 디자인 시안 5종입니다. 마음에 드는 디자인을 골라 도장집에서 실물로 제작하세요.</p>
+      <p class="lead">전각(篆刻) 느낌으로 글자를 꽉 채운 인감 시안 6종 — 동그라미 3 · 네모 3. 마음에 드는 디자인을 골라 도장집에서 실물로 제작하세요.</p>
     </div>
   </section>
 
-  <section class="section" style="padding-top:40px">
+  <section class="section" style="padding-top:36px">
     <div class="wrap">
       <div class="warn">
-        ⚠️ <b>안내</b> — 아래는 <b>디자인 시안(이미지)</b>입니다. 실제 법인 인감은 이 디자인을 바탕으로 <b>도장집에서 실물 제작 후 등기소에 인감신고(인감증명 발급)</b>를 해야 법적 효력이 생깁니다.
-        보안을 위해 <b>실제 등록 인감 이미지는 웹·문서에 공개하지 마세요</b>(위조 위험). 이 페이지는 시안 선택용입니다.
+        ⚠️ <b>안내</b> — 아래는 <b>디자인 시안(이미지)</b>입니다. 실제 법인 인감은 도장집에서 <b>전서체로 실물 각인 후 등기소에 인감신고</b>를 해야 효력이 생깁니다.
+        (전서체 전용 폰트가 없어 웹에서는 획을 꽉 채운 근사치로 표현했습니다.)
+        보안을 위해 <b>등록된 실제 인감 이미지는 웹·문서에 공개하지 마세요.</b>
       </div>
       <div class="seal-grid" id="sealGrid"></div>
     </div>
@@ -56,67 +58,49 @@
 <script>
 (function () {
   var R = "#c1121f";
-  var SERIF = "'Batang','Nanum Myeongjo','AppleMyungjo','Malgun Gothic',serif";
-  var SANS = "'Malgun Gothic','Pretendard','Apple SD Gothic Neo',sans-serif";
+  var FSANS = "'Pretendard','Malgun Gothic','Apple SD Gothic Neo',sans-serif";
+  var FSERIF = "'Batang','Nanum Myeongjo','AppleMyungjo',serif";
+
   function wrap(inner) {
     return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">' + inner + '</svg>';
   }
-
-  // 1) 원형 표준 (한글 외곽 + 중앙 한자)
-  var s1 = wrap(
-    '<defs><path id="s1a" d="M42 100 A58 58 0 0 1 158 100"/></defs>' +
-    '<circle cx="100" cy="100" r="92" fill="none" stroke="' + R + '" stroke-width="7"/>' +
-    '<circle cx="100" cy="100" r="81" fill="none" stroke="' + R + '" stroke-width="2"/>' +
-    '<text fill="' + R + '" font-family="' + SANS + '" font-weight="800" font-size="20" letter-spacing="1"><textPath href="#s1a" startOffset="50%" text-anchor="middle">주식회사 에이펙스</textPath></text>' +
-    '<text x="100" y="92" text-anchor="middle" fill="' + R + '" font-family="' + SERIF + '" font-weight="800" font-size="25" letter-spacing="9">代表</text>' +
-    '<text x="100" y="122" text-anchor="middle" fill="' + R + '" font-family="' + SERIF + '" font-weight="800" font-size="25" letter-spacing="9">理事</text>' +
-    '<text x="100" y="152" text-anchor="middle" fill="' + R + '" font-family="' + SERIF + '" font-weight="800" font-size="25" letter-spacing="9">之印</text>');
-
-  // 2) 원형 모던 (영문 외곽 + 한글 중앙)
-  var s2 = wrap(
-    '<defs><path id="s2a" d="M50 100 A50 50 0 0 1 150 100"/></defs>' +
-    '<circle cx="100" cy="100" r="92" fill="none" stroke="' + R + '" stroke-width="8"/>' +
-    '<text fill="' + R + '" font-family="' + SANS + '" font-weight="800" font-size="13" letter-spacing="2.5"><textPath href="#s2a" startOffset="50%" text-anchor="middle">APEX CO., LTD.</textPath></text>' +
-    '<text x="100" y="108" text-anchor="middle" fill="' + R + '" font-family="' + SANS + '" font-weight="800" font-size="32" letter-spacing="1">에이펙스</text>' +
-    '<text x="100" y="138" text-anchor="middle" fill="' + R + '" font-family="' + SERIF + '" font-weight="800" font-size="16" letter-spacing="6">代表理事印</text>');
-
-  // 3) 정사각 전각 인감 (세로쓰기 3열)
-  function col(x, chars, top, step, size) {
-    var t = '<text x="' + x + '" y="' + top + '" text-anchor="middle" fill="' + R + '" font-family="' + SERIF + '" font-weight="800" font-size="' + size + '">';
-    for (var i = 0; i < chars.length; i++) t += '<tspan x="' + x + '"' + (i ? ' dy="' + step + '"' : '') + '>' + chars[i] + '</tspan>';
-    return t + '</text>';
+  // 한 글자를 칸(폭 w)에 꽉 채워 늘려 배치 (전각 느낌)
+  function ch(cx, cy, w, c, fs, font) {
+    return '<text x="' + cx + '" y="' + cy + '" text-anchor="middle" dominant-baseline="central" ' +
+      'textLength="' + w + '" lengthAdjust="spacingAndGlyphs" font-family="' + (font || FSANS) + '" ' +
+      'font-weight="900" font-size="' + fs + '" fill="' + R + '" stroke="' + R + '" stroke-width="' + (fs * 0.11).toFixed(2) + '" paint-order="stroke" stroke-linejoin="round">' + c + '</text>';
   }
-  var s3 = wrap(
-    '<rect x="16" y="16" width="168" height="168" rx="16" fill="none" stroke="' + R + '" stroke-width="8"/>' +
-    '<rect x="28" y="28" width="144" height="144" rx="9" fill="none" stroke="' + R + '" stroke-width="2"/>' +
-    col(146, "株式會社", 60, 32, 24) +
-    col(100, "에이펙스", 60, 32, 24) +
-    col(54, "代表理事印", 48, 27, 21));
-
-  // 4) 원형 브랜드 (영문 외곽 + 중앙 A 심볼)
-  var s4 = wrap(
-    '<defs><path id="s4a" d="M40 100 A60 60 0 0 1 160 100"/></defs>' +
-    '<circle cx="100" cy="100" r="92" fill="none" stroke="' + R + '" stroke-width="6"/>' +
-    '<circle cx="100" cy="100" r="80" fill="none" stroke="' + R + '" stroke-width="1.5"/>' +
-    '<text fill="' + R + '" font-family="' + SANS + '" font-weight="800" font-size="14" letter-spacing="2"><textPath href="#s4a" startOffset="50%" text-anchor="middle">APEX CO., LTD.</textPath></text>' +
-    '<g fill="none" stroke="' + R + '" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M79 130 100 66 121 130"/><path d="M88 106 H112"/></g>' +
-    '<circle cx="100" cy="66" r="4.2" fill="' + R + '"/>' +
-    '<text x="100" y="156" text-anchor="middle" fill="' + R + '" font-family="' + SANS + '" font-weight="700" font-size="12" letter-spacing="3">주식회사 에이펙스</text>');
-
-  // 5) 원형 전통 (한글 원형 배열 + 중앙 印)
-  var s5 = wrap(
-    '<defs><path id="s5c" d="M100 100 m -82 0 a 82 82 0 1 1 164 0 a 82 82 0 1 1 -164 0"/></defs>' +
-    '<circle cx="100" cy="100" r="92" fill="none" stroke="' + R + '" stroke-width="7"/>' +
-    '<circle cx="100" cy="100" r="74" fill="none" stroke="' + R + '" stroke-width="2"/>' +
-    '<text fill="' + R + '" font-family="' + SERIF + '" font-weight="800" font-size="15" letter-spacing="3"><textPath href="#s5c" startOffset="0%">주식회사 에이펙스 · 代表理事 · </textPath></text>' +
-    '<text x="100" y="126" text-anchor="middle" fill="' + R + '" font-family="' + SERIF + '" font-weight="800" font-size="66">印</text>');
+  // 격자 배치: chars(문자열), cols, rows, 안쪽 영역(x0,y0,x1,y1)
+  function grid(chars, cols, rows, x0, y0, x1, y1, fill, font) {
+    var cw = (x1 - x0) / cols, chh = (y1 - y0) / rows;
+    var fs = Math.min(cw, chh) * (fill || 1.06);
+    var out = "";
+    for (var i = 0; i < chars.length; i++) {
+      var r = Math.floor(i / cols), c = i % cols;
+      out += ch(x0 + cw * (c + 0.5), y0 + chh * (r + 0.5), cw * 1.0, chars[i], fs, font);
+    }
+    return out;
+  }
+  function sq() { return '<rect x="8" y="8" width="184" height="184" rx="14" fill="none" stroke="' + R + '" stroke-width="16"/>' +
+    '<rect x="24" y="24" width="152" height="152" rx="6" fill="none" stroke="' + R + '" stroke-width="3.5"/>'; }
+  function ci() { return '<circle cx="100" cy="100" r="90" fill="none" stroke="' + R + '" stroke-width="16"/>' +
+    '<circle cx="100" cy="100" r="75" fill="none" stroke="' + R + '" stroke-width="3.5"/>'; }
 
   var SEALS = [
-    { key: "round-hanja", name: "원형 · 표준(한자)", desc: "외곽 한글 상호 + 중앙 ‘代表理事之印’. 가장 전통적인 법인 인감 형식.", svg: s1 },
-    { key: "round-modern", name: "원형 · 모던(한글)", desc: "외곽 영문 상호 + 중앙 큰 ‘에이펙스’. 현대적이고 가독성이 높음.", svg: s2 },
-    { key: "square", name: "정사각 · 전각", desc: "세로쓰기 3열(株式會社·에이펙스·代表理事印). 격식 있는 각인.", svg: s3 },
-    { key: "round-brand", name: "원형 · 브랜드(A)", desc: "중앙에 APEX ‘A’ 심볼. 로고와 통일된 브랜드형 인장.", svg: s4 },
-    { key: "round-classic", name: "원형 · 전통(印)", desc: "상호를 원형으로 두르고 중앙에 큰 ‘印’. 도장 느낌이 강함.", svg: s5 }
+    // ── 동그라미 3 ──
+    { key: "ci-2x2", kind: "동그라미", name: "에이펙스 (원형 2×2)", desc: "원 안에 네 글자를 꽉 채운 원형 전각.",
+      svg: wrap(ci() + grid("에이펙스", 2, 2, 38, 38, 162, 162, 1.08)) },
+    { key: "ci-3x3", kind: "동그라미", name: "주식회사에이펙스印 (원형 3×3)", desc: "원형 안에 9칸을 채운 전각형.",
+      svg: wrap(ci() + grid("주식회사에이펙스印", 3, 3, 38, 38, 162, 162, 1.02)) },
+    { key: "ci-daepyo", kind: "동그라미", name: "代表理事印 (원형 한자)", desc: "‘대표이사인’ 한자를 원 안에 꽉 채운 전각.",
+      svg: wrap(ci() + grid("代表理事印", 3, 2, 40, 54, 160, 146, 1.04, FSERIF)) },
+    // ── 네모 3 ──
+    { key: "sq-2x2", kind: "네모", name: "에이펙스 (2×2)", desc: "‘에이펙스’ 네 글자를 큼직하게 꽉 채운 전각형.",
+      svg: wrap(sq() + grid("에이펙스", 2, 2, 28, 28, 172, 172, 1.1)) },
+    { key: "sq-3x3", kind: "네모", name: "주식회사에이펙스印 (3×3)", desc: "9칸을 빈틈없이 채운 정통 전각 스타일.",
+      svg: wrap(sq() + grid("주식회사에이펙스印", 3, 3, 27, 27, 173, 173, 1.1)) },
+    { key: "sq-hanja", kind: "네모", name: "株式會社 에이펙스 印 (한자)", desc: "한자+한글 3×3 혼합 전각.",
+      svg: wrap(sq() + grid("株式會社에이펙스印", 3, 3, 27, 27, 173, 173, 1.06, FSERIF)) }
   ];
 
   function trigger(url, name) { var a = document.createElement("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); }
@@ -135,15 +119,16 @@
     img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(s.svg);
   }
 
-  var grid = document.getElementById("sealGrid");
+  var wrapEl = document.getElementById("sealGrid");
   SEALS.forEach(function (s) {
     var card = document.createElement("div"); card.className = "seal-card";
-    card.innerHTML = '<div class="seal-show">' + s.svg + "</div><div class=\"seal-meta\"><h3>" + s.name + "</h3><p>" + s.desc + "</p>" +
+    card.innerHTML = '<div class="seal-show">' + s.svg + '</div><div class="seal-meta">' +
+      '<span class="kind">' + s.kind + '</span><h3>' + s.name + '</h3><p>' + s.desc + '</p>' +
       '<div class="seal-dl"><button class="btn-sm primary">SVG</button><button class="btn-sm">PNG</button></div></div>';
     var b = card.querySelectorAll("button");
     b[0].addEventListener("click", function () { dlSVG(s); });
     b[1].addEventListener("click", function () { dlPNG(s); });
-    grid.appendChild(card);
+    wrapEl.appendChild(card);
   });
 })();
 </script>
